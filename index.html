@@ -1,337 +1,427 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pavan Kumar Uppuluri | Engineering Leader</title>
+<title>Pavan Kumar Uppuluri | Senior Engineering Manager</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 body{
-font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background:#f7f9fc;
-color:#1f2937;
+font-family:Segoe UI,Arial;
+background:#f5f7fb;
+color:#333;
 }
 
-header{
+.container{
+display:flex;
+min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:300px;
 background:#0f172a;
 color:white;
-padding:60px 20px;
-text-align:center;
+padding:40px;
+position:sticky;
+top:0;
+height:100vh;
 }
 
-header h1{
+.sidebar h1{
 margin:0;
-font-size:40px;
+font-size:24px;
 }
 
-header p{
-margin-top:10px;
-font-size:18px;
-opacity:0.9;
+.sidebar p{
+color:#cbd5f5;
+margin-top:6px;
+margin-bottom:30px;
 }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
+.nav a{
+display:block;
+text-decoration:none;
+color:#e2e8f0;
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-h2{
+.nav a:hover{
+color:#38bdf8;
+}
+
+/* CONTENT */
+
+.content{
+flex:1;
+padding:50px;
+}
+
+.section{
+margin-bottom:70px;
+}
+
+.section h2{
+border-left:5px solid #2563eb;
+padding-left:12px;
 margin-bottom:25px;
-font-size:28px;
-border-bottom:2px solid #e5e7eb;
-padding-bottom:8px;
+}
+
+/* CARDS */
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:26px;
 border-radius:10px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
-margin-bottom:20px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 26px rgba(0,0,0,0.12);
+}
+
+.card i{
+font-size:26px;
+color:#2563eb;
+margin-bottom:12px;
 }
 
 .card h3{
-margin-top:0;
+margin:0 0 8px 0;
+font-size:18px;
+font-weight:600;
+color:#111827;
 }
 
-.achievement-list li{
-margin-bottom:10px;
+.card p{
+margin:0;
+font-size:15px;
+line-height:1.6;
+color:#374151;
 }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.stat-card{
-background:white;
-padding:25px;
-text-align:center;
-border-radius:10px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
-}
-
-.stat-number{
-font-size:34px;
-font-weight:bold;
-color:#2563eb;
-}
+/* TIMELINE */
 
 .timeline{
-position:relative;
-margin-left:20px;
-}
-
-.timeline:before{
-content:"";
-position:absolute;
-left:-10px;
-top:0;
-bottom:0;
-width:3px;
-background:#e5e7eb;
+border-left:3px solid #2563eb;
+padding-left:20px;
 }
 
 .timeline-item{
-margin-bottom:30px;
-padding-left:20px;
+margin-bottom:35px;
+}
+
+.timeline-item h3{
+margin:0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+height:auto;
 position:relative;
 }
 
-.timeline-item:before{
-content:"";
-position:absolute;
-left:-17px;
-top:6px;
-width:12px;
-height:12px;
-background:#2563eb;
-border-radius:50%;
-}
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.skill-card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
-}
-
-.skill-card h3{
-margin-bottom:15px;
-font-size:18px;
-}
-
-.skill-tags{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-}
-
-.skill-tags span{
-background:#f3f4f6;
-padding:6px 10px;
-border-radius:6px;
-font-size:13px;
-border:1px solid #e5e7eb;
-}
-
-.cert-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.cert-card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
-display:flex;
-align-items:center;
-gap:15px;
-}
-
-.cert-card i{
-font-size:26px;
-color:#2563eb;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#0f172a;
-color:white;
-margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<div class="container">
+
+<div class="sidebar">
+
 <h1>Pavan Kumar Uppuluri</h1>
-<p>Engineering Leader | Cloud | Microservices | Digital Transformation</p>
-</header>
+<p>Senior Engineering Manager<br>
+Cloud | Architecture | Digital Transformation</p>
 
-<section>
-<h2>Key Achievements</h2>
-
-<div class="stats">
-
-<div class="stat-card">
-<div class="stat-number">40%</div>
-Productivity Improvement
-</div>
-
-<div class="stat-card">
-<div class="stat-number">Large</div>
-Scale Microservices Transformation
-</div>
-
-<div class="stat-card">
-<div class="stat-number">Global</div>
-Engineering Team Leadership
+<div class="nav">
+<a href="#about">About</a>
+<a href="#achievements">Achievements</a>
+<a href="#skills">Capabilities</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Certifications</a>
 </div>
 
 </div>
 
-<ul class="achievement-list">
-<li>Led Microservices Transformation for enterprise platform</li>
-<li>Improved engineering productivity by 40%</li>
-<li>Built and scaled high performing global engineering teams</li>
-</ul>
+<div class="content">
+
+<section id="about" class="section">
+
+<h2>About</h2>
+
+<p>
+Senior Engineering Manager with 19+ years of experience delivering enterprise platforms,
+leading global engineering teams, and driving digital transformation across large
+organizations including Oracle, JPMorgan Chase, ServiceNow, GAP, and CBRE.
+</p>
+
+<p>
+Expertise spans cloud architecture, microservices platforms, large-scale distributed
+systems, and engineering leadership. Passionate about modern architecture,
+AI-enabled engineering productivity, and building high-performing teams that
+deliver strategic business outcomes.
+</p>
 
 </section>
 
-<section>
+<section id="achievements" class="section">
+
+<h2>Key Achievements</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-rocket"></i>
+<h3>ServiceNow CRM Platform</h3>
+<p>
+Delivered Install Base Management and Sales Order Management solutions
+adopted by major customers including BT, SoftBank and AT&T.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-diagram-project"></i>
+<h3>JPMorgan Microservices Transformation</h3>
+<p>
+Led modernization of the PUMA platform from monolithic architecture to scalable microservices.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-users"></i>
+<h3>High-Performing Teams</h3>
+<p>
+Built and mentored engineering teams achieving 80% promotion rate
+and 100% retention.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-brain"></i>
+<h3>AI-Driven Development</h3>
+<p>
+Integrated AI-assisted engineering workflows improving productivity
+by 30-40%.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Engineering Productivity</h3>
+<p>
+Improved engineering efficiency by 30-40% through AI-driven development,
+automation strategies and agile workflows.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-database"></i>
+<h3>Enterprise Platforms</h3>
+<p>
+Designed distributed systems handling millions of transactions
+with high reliability and performance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="section">
+
+<h2>Leadership & Technical Capabilities</h2>
+
+<div class="card-grid">
+
+<div class="card">
+<i class="fa-solid fa-people-group"></i>
+<h3>Engineering Leadership</h3>
+<p>
+Team leadership, OKRs, performance management,
+talent development and organizational scaling.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-cloud"></i>
+<h3>Cloud & Architecture</h3>
+<p>
+Enterprise architecture, microservices design,
+AWS, Azure and Google Cloud platforms.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-gears"></i>
+<h3>Modern Development</h3>
+<p>
+Java, Spring Boot, Angular, React, Node.js,
+CI/CD pipelines and DevOps automation.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-network-wired"></i>
+<h3>Distributed Systems</h3>
+<p>
+Kafka, RabbitMQ, Kubernetes and containerized
+platform architectures.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-chart-line"></i>
+<h3>Observability</h3>
+<p>
+Prometheus, Grafana, Splunk and New Relic
+monitoring platforms.
+</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-brain"></i>
+<h3>AI Innovation</h3>
+<p>
+Generative AI, Agentic AI and AI-assisted
+engineering productivity platforms.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" class="section">
 
 <h2>Professional Experience</h2>
 
 <div class="timeline">
 
-<div class="timeline-item card">
-<h3>Engineering Leader</h3>
-<p>Driving cloud transformation and engineering excellence.</p>
+<div class="timeline-item">
+<h3>Senior Engineering Manager — CBRE</h3>
+<p>Jun 2025 – Present</p>
+<p>Leading engineering organization delivering multiple business-critical
+UK platforms and AI-driven SDLC transformation.</p>
 </div>
 
-<div class="timeline-item card">
-<h3>Senior Engineering Manager</h3>
-<p>Led multiple engineering teams delivering enterprise platforms.</p>
+<div class="timeline-item">
+<h3>Manager — ServiceNow</h3>
+<p>Jan 2022 – Jun 2025</p>
+<p>Led CRM platform capabilities including Install Base Management,
+Sales Order Management and proactive AI-driven customer service.</p>
 </div>
 
-<div class="timeline-item card">
-<h3>Technical Architect</h3>
-<p>Designed scalable distributed architectures and microservices platforms.</p>
+<div class="timeline-item">
+<h3>Staff Software Engineer — GAP IT Services</h3>
+<p>Jan 2021 – Jan 2022</p>
+<p>Architected Prepack and Booking Visibility applications improving
+retail logistics and operational efficiency.</p>
 </div>
 
+<div class="timeline-item">
+<h3>Associate Vice President — JPMorgan Chase</h3>
+<p>Aug 2017 – Jan 2021</p>
+<p>Led microservices transformation of the PUMA platform enabling
+scalable financial services systems.</p>
 </div>
 
-</section>
-
-<section class="skills">
-
-<h2>Core Skills</h2>
-
-<div class="skills-grid">
-
-<div class="skill-card">
-<h3><i class="fas fa-cloud"></i> Cloud & Architecture</h3>
-<div class="skill-tags">
-<span>Microservices</span>
-<span>Cloud Architecture</span>
-<span>Kubernetes</span>
-<span>API Design</span>
-<span>Event Driven Systems</span>
-<span>Scalability</span>
-</div>
+<div class="timeline-item">
+<h3>Project Lead — Mphasis</h3>
+<p>Aug 2016 – Apr 2017</p>
+<p>Managed enterprise banking projects for JPMorgan.</p>
 </div>
 
-<div class="skill-card">
-<h3><i class="fas fa-users"></i> Leadership</h3>
-<div class="skill-tags">
-<span>Engineering Leadership</span>
-<span>Team Building</span>
-<span>Mentoring</span>
-<span>Stakeholder Management</span>
-<span>Strategic Planning</span>
-</div>
-</div>
-
-<div class="skill-card">
-<h3><i class="fas fa-cogs"></i> Engineering Practices</h3>
-<div class="skill-tags">
-<span>Agile</span>
-<span>DevOps</span>
-<span>CI/CD</span>
-<span>Test Automation</span>
-<span>Performance Engineering</span>
-</div>
-</div>
-
-<div class="skill-card">
-<h3><i class="fas fa-chart-line"></i> Business & Delivery</h3>
-<div class="skill-tags">
-<span>Product Delivery</span>
-<span>Digital Transformation</span>
-<span>Program Management</span>
-<span>Cross-functional Leadership</span>
-<span>Innovation Strategy</span>
-</div>
+<div class="timeline-item">
+<h3>Principal Application Engineer — Oracle</h3>
+<p>Dec 2006 – Aug 2016</p>
+<p>Built enterprise procurement platforms including supplier onboarding,
+shipment automation and sourcing SaaS systems.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="certifications" class="section">
 
-<h2>Certifications</h2>
+<h2>Professional Certifications</h2>
 
-<div class="cert-grid">
+<div class="card-grid">
 
-<div class="cert-card">
-<i class="fab fa-aws"></i>
-<div>AWS Certification</div>
+<div class="card">
+<i class="fa-brands fa-aws"></i>
+<h3>AWS</h3>
+<p>AWS Certified Solutions Architect – Professional</p>
 </div>
 
-<div class="cert-card">
-<i class="fas fa-project-diagram"></i>
-<div>Microservices Architecture Certification</div>
+<div class="card">
+<i class="fa-brands fa-google"></i>
+<h3>Google Cloud</h3>
+<p>Professional Cloud Architect</p>
 </div>
 
-<div class="cert-card">
-<i class="fas fa-user-tie"></i>
-<div>Leadership Development Certification</div>
+<div class="card">
+<i class="fa-solid fa-dharmachakra"></i>
+<h3>Kubernetes</h3>
+<p>Certified Kubernetes Application Developer (CKAD)</p>
 </div>
 
-<div class="cert-card">
-<i class="fas fa-cloud"></i>
-<div>Cloud Architecture Certification</div>
+<div class="card">
+<i class="fa-brands fa-java"></i>
+<h3>Oracle Java</h3>
+<p>Oracle Certified Professional – Java SE 17</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-leaf"></i>
+<h3>Spring</h3>
+<p>Spring Certified Professional – VMware</p>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-microsoft"></i>
+<h3>Azure</h3>
+<p>Microsoft Azure Fundamentals</p>
 </div>
 
 </div>
 
 </section>
 
-<footer>
+</div>
 
-<p>© 2026 Pavan Kumar Uppuluri</p>
-
-</footer>
+</div>
 
 </body>
 </html>
+```
