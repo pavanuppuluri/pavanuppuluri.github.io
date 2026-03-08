@@ -10,56 +10,88 @@
 <style>
 
 body{
-font-family: "Segoe UI", Arial, sans-serif;
 margin:0;
-background:#f4f6f9;
+font-family:"Segoe UI", Arial;
+background:#f5f6fa;
 color:#333;
 }
 
-header{
-background:#0a66c2;
-color:white;
-padding:60px 20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:42px;
-}
-
-header p{
-margin-top:10px;
-font-size:18px;
-}
+/* layout */
 
 .container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
+display:flex;
+height:100vh;
+}
+
+/* left navigation */
+
+.sidebar{
+width:280px;
+background:#0a66c2;
+color:white;
+padding:30px;
+box-sizing:border-box;
+position:fixed;
+height:100%;
+}
+
+.sidebar h2{
+margin-top:0;
+font-size:24px;
+}
+
+.sidebar p{
+font-size:14px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:10px 0;
+font-size:15px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar a:hover{
+opacity:0.8;
+}
+
+/* content pane */
+
+.content{
+margin-left:300px;
+padding:40px;
+max-width:1000px;
 }
 
 .section{
-background:white;
-padding:30px;
-margin-bottom:30px;
-border-radius:8px;
-box-shadow:0 3px 12px rgba(0,0,0,0.08);
+margin-bottom:60px;
 }
 
 .section h2{
-margin-top:0;
 color:#0a66c2;
+margin-bottom:15px;
 }
+
+/* achievements */
+
+.achievement{
+margin-bottom:15px;
+}
+
+/* skills */
 
 .skills span{
 display:inline-block;
 background:#eef3fb;
 padding:8px 12px;
-margin:6px;
+margin:5px;
 border-radius:6px;
 font-size:14px;
 }
+
+/* timeline */
 
 .timeline{
 border-left:3px solid #0a66c2;
@@ -74,24 +106,10 @@ margin-bottom:25px;
 margin-bottom:5px;
 }
 
-.achievement{
-margin-bottom:12px;
-}
-
-.cert{
-margin-bottom:6px;
-}
-
 footer{
-text-align:center;
-padding:25px;
-background:#222;
-color:white;
-}
-
-a{
-color:#0a66c2;
-text-decoration:none;
+margin-top:50px;
+font-size:14px;
+color:#777;
 }
 
 </style>
@@ -100,66 +118,83 @@ text-decoration:none;
 
 <body>
 
-<header>
-
-<h1>Pavan Uppuluri</h1>
-
-<p>Senior Engineering Manager | Cloud Architecture | AI Systems</p>
-
-<p>
-📞 +91-9492068324 |
-✉ p.kumaru.1985@gmail.com |
-<a style="color:white" href="https://www.linkedin.com/in/pavanuppuluri1985/">LinkedIn</a>
-</p>
-
-</header>
-
 <div class="container">
 
-<!-- ABOUT -->
+<!-- LEFT PANE -->
 
-<div class="section">
+<div class="sidebar">
 
-<h2>About Me</h2>
+<h2>Pavan Uppuluri</h2>
+
+<p>
+Senior Engineering Manager  
+Cloud | AI | Distributed Systems
+</p>
+
+<p>
+📞 +91-9492068324  
+<br>
+✉ p.kumaru.1985@gmail.com
+</p>
+
+<a href="#about">About</a>
+<a href="#achievements">Key Achievements</a>
+<a href="#skills">Core Competencies</a>
+<a href="#certifications">Certifications</a>
+<a href="#experience">Professional Experience</a>
+<a href="#education">Education</a>
+
+</div>
+
+<!-- RIGHT PANE -->
+
+<div class="content">
+
+<section id="about" class="section">
+
+<h2>About</h2>
 
 <p>
 
-Senior Engineering Manager with 19+ years of experience in enterprise software, digital transformation,
-and large-scale distributed systems. Proven leader in building high-performing engineering organizations,
-delivering scalable platforms, and driving modernization initiatives across global enterprises.
+Senior Engineering Manager with 19+ years of experience building scalable enterprise platforms,
+leading high-performing engineering teams, and driving digital transformation across global
+organizations.
 
 </p>
 
 <p>
 
-Experienced in leading architecture transformation, microservices adoption, AI-driven development, and
-modern SDLC practices while aligning technology strategy with business growth and innovation.
+Expertise in modern cloud architectures, microservices platforms, AI-driven development
+practices, and engineering leadership focused on delivering business impact at scale.
 
+</p>
+
+</section>
+
+
+<section id="achievements" class="section">
+
+<h2>Key Achievements</h2>
+
+<div class="achievement">
+
+<b>Revenue & Customer Growth</b>
+
+<p>
+Delivered ServiceNow CRM capabilities including Install Base Management and Sales Order
+Management adopted by enterprises such as BT, SoftBank, and AT&T.
 </p>
 
 </div>
 
-<!-- KEY ACHIEVEMENTS -->
-
-<div class="section">
-
-<h2>Key Achievements & Business Impact</h2>
-
 <div class="achievement">
 
-<b>Accelerated Revenue & Customer Growth</b>
+<b>High-Performing Engineering Culture</b>
 
-<p>Played a pivotal role in shaping the ServiceNow CRM roadmap by delivering Install Base Management
-and Sales Order Management, adopted by major enterprises like BT, SoftBank, and AT&T.</p>
-
-</div>
-
-<div class="achievement">
-
-<b>Leadership in Talent Development</b>
-
-<p>Built a high-performing engineering team achieving 80% promotion rate (8/10 members) and
-100% retention while delivering key strategic initiatives.</p>
+<p>
+Built engineering teams achieving 80% promotion rate and 100% retention through
+structured OKRs and mentorship.
+</p>
 
 </div>
 
@@ -167,32 +202,27 @@ and Sales Order Management, adopted by major enterprises like BT, SoftBank, and 
 
 <b>Platform Modernization</b>
 
-<p>Led microservices transformation of the PUMA platform at JPMorgan Chase, significantly
-improving scalability and onboarding capacity.</p>
+<p>
+Led the modernization of JPMorgan's PUMA platform migrating monolithic architecture
+to microservices.
+</p>
 
 </div>
 
 <div class="achievement">
 
-<b>Operational Excellence</b>
+<b>AI-Driven Productivity Gains</b>
 
-<p>Built distributed systems handling millions of transactions with high reliability and performance.</p>
-
-</div>
-
-<div class="achievement">
-
-<b>Productivity Improvements</b>
-
-<p>Improved engineering productivity by 30% through AI-driven development and automation.</p>
+<p>
+Improved engineering productivity by 30% using AI-assisted development and automation.
+</p>
 
 </div>
 
-</div>
+</section>
 
-<!-- SKILLS -->
 
-<div class="section">
+<section id="skills" class="section">
 
 <h2>Core Competencies</h2>
 
@@ -201,7 +231,7 @@ improving scalability and onboarding capacity.</p>
 <span>Engineering Leadership</span>
 <span>System Architecture</span>
 <span>Microservices</span>
-<span>Java Full Stack</span>
+<span>Java</span>
 <span>Spring Boot</span>
 <span>AWS</span>
 <span>Azure</span>
@@ -212,39 +242,40 @@ improving scalability and onboarding capacity.</p>
 <span>RabbitMQ</span>
 <span>CI/CD</span>
 <span>Jenkins</span>
-<span>Generative AI</span>
-<span>Agentic AI</span>
 <span>React</span>
 <span>Angular</span>
 <span>Node.js</span>
 <span>MongoDB</span>
 <span>Oracle</span>
-<span>MySQL</span>
 <span>Prometheus</span>
 <span>Grafana</span>
+<span>Generative AI</span>
+<span>Agentic AI</span>
 
 </div>
 
-</div>
+</section>
 
-<!-- CERTIFICATIONS -->
 
-<div class="section">
+<section id="certifications" class="section">
 
 <h2>Certifications</h2>
 
-<div class="cert">Oracle Certified Professional – Java SE 17</div>
-<div class="cert">AWS Certified Solutions Architect – Professional</div>
-<div class="cert">Certified Kubernetes Application Developer (CKAD)</div>
-<div class="cert">Microsoft Certified – Azure Fundamentals</div>
-<div class="cert">Spring Certified Professional – VMware</div>
-<div class="cert">Google Cloud Professional Cloud Architect</div>
+<ul>
 
-</div>
+<li>Oracle Certified Professional – Java SE 17</li>
+<li>AWS Certified Solutions Architect – Professional</li>
+<li>Certified Kubernetes Application Developer (CKAD)</li>
+<li>Microsoft Certified – Azure Fundamentals</li>
+<li>Spring Certified Professional – VMware</li>
+<li>Google Cloud Professional Cloud Architect</li>
 
-<!-- EXPERIENCE -->
+</ul>
 
-<div class="section">
+</section>
+
+
+<section id="experience" class="section">
 
 <h2>Professional Experience</h2>
 
@@ -253,75 +284,79 @@ improving scalability and onboarding capacity.</p>
 <div class="timeline-item">
 
 <h3>Senior Engineering Manager – CBRE</h3>
-<p><i>Jun 2025 – Present</i></p>
 
-<p>Leading engineering organization delivering and modernizing six critical enterprise platforms,
-driving AI adoption across SDLC, and leading a 35+ member engineering team.</p>
+<p>Jun 2025 – Present</p>
+
+<p>
+Leading a 35+ member engineering organization delivering six business-critical
+applications and driving AI adoption across the SDLC.
+</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>Manager – ServiceNow</h3>
-<p><i>Jan 2022 – Jun 2025</i></p>
 
-<p>Led engineering teams delivering CRM platform features including Install Base Management
-and Sales Order Management.</p>
+<p>Jan 2022 – Jun 2025</p>
+
+<p>
+Led CRM platform initiatives including Install Base Management
+and Sales Order Management.
+</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>Staff Software Engineer – GAP IT Services</h3>
-<p><i>Jan 2021 – Jan 2022</i></p>
 
-<p>Architected and delivered Prepack application improving logistics operations and reducing
-costs by 30%.</p>
+<p>Jan 2021 – Jan 2022</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>Associate Vice President – JPMorgan Chase</h3>
-<p><i>Aug 2017 – Jan 2021</i></p>
 
-<p>Led modernization of PUMA platform migrating monolith architecture to microservices.</p>
+<p>Aug 2017 – Jan 2021</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>Project Lead – Mphasis</h3>
-<p><i>Aug 2016 – Apr 2017</i></p>
+
+<p>Aug 2016 – Apr 2017</p>
 
 </div>
 
 <div class="timeline-item">
 
 <h3>Principal Application Engineer – Oracle</h3>
-<p><i>Dec 2006 – Aug 2016</i></p>
 
-<p>Developed enterprise procurement solutions including supplier onboarding,
-shipment notifications, and SaaS sourcing platforms.</p>
+<p>Dec 2006 – Aug 2016</p>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
-<!-- EDUCATION -->
 
-<div class="section">
+<section id="education" class="section">
 
 <h2>Education</h2>
 
-<p><b>B.Tech – Computer Science</b></p>
-<p>Jawaharlal Nehru Technological University</p>
+<p>
 
-</div>
+<b>B.Tech – Computer Science</b>  
+Jawaharlal Nehru Technological University  
+2006
 
-</div>
+</p>
+
+</section>
 
 <footer>
 
@@ -329,5 +364,10 @@ shipment notifications, and SaaS sourcing platforms.</p>
 
 </footer>
 
+</div>
+
+</div>
+
 </body>
+
 </html>
