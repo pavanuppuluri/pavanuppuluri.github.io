@@ -294,15 +294,14 @@ grid-template-columns:1fr;
   }
 }
 
-<style>
 .contact-card {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
   border-radius: 8px;
-  background: #1e293b;
-  color: #e2e8f0;
+  background: #1e293b; /* dark navy */
+  color: #f8fafc; /* professional white */
   text-decoration: none;
   font-size: 14px;
   transition: all 0.2s ease;
@@ -312,12 +311,17 @@ grid-template-columns:1fr;
   font-size: 16px;
   width: 20px;
   text-align: center;
+  color: #38bdf8; /* subtle professional blue */
 }
 
 .contact-card:hover {
-  background: #2563eb;
-  color: #fff;
+  background: #2563eb; /* hover blue */
+  color: #ffffff; 
   transform: translateX(3px);
+}
+
+.contact-card:hover i {
+  color: #ffffff; /* icon also white on hover */
 }
 </style>
 </head>
