@@ -19,9 +19,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
         body { background-color: var(--bg-main); color: var(--text-primary); display: flex; height: 100vh; overflow: hidden; }
 
-        /* Left Sidebar */
+        /* Sidebar Navigation */
         .sidebar {
-            width: 360px;
+            width: 380px;
             background-color: var(--bg-sidebar);
             height: 100vh;
             padding: 3rem 2rem;
@@ -32,18 +32,18 @@
         }
 
         .profile-section { text-align: center; margin-bottom: 2rem; }
-        h1 { font-size: 1.7rem; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        h1 { font-size: 1.8rem; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.5px; }
         .tagline { color: var(--accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 1.5rem; }
         
-        .contact-box { background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border-dim); }
-        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 0.8rem; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; }
+        .contact-box { background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border-dim); margin-bottom: 2rem; }
+        .contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 0.8rem; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
+        .contact-item:hover { color: var(--accent); }
         .contact-item i { color: var(--accent); width: 18px; }
 
-        .nav-links { margin-top: 2rem; flex-grow: 1; }
-        .nav-links a { display: flex; align-items: center; gap: 12px; padding: 0.7rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: 8px; font-size: 0.9rem; margin-bottom: 0.4rem; transition: 0.3s; }
+        .nav-links a { display: flex; align-items: center; gap: 12px; padding: 0.8rem 1rem; color: var(--text-secondary); text-decoration: none; border-radius: 8px; font-size: 0.9rem; margin-bottom: 0.4rem; transition: 0.3s; }
         .nav-links a:hover { background: rgba(56, 189, 248, 0.1); color: var(--accent); }
 
-        /* Right Content Pane */
+        /* Main Content Area */
         .main-content {
             flex-grow: 1;
             height: 100vh;
@@ -53,65 +53,42 @@
         }
 
         .section { max-width: 1000px; margin: 0 auto 5rem; }
-        h2 { font-size: 1.5rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 15px; font-weight: 700; color: #fff; border-bottom: 1px solid var(--border-dim); padding-bottom: 10px; }
+        h2 { font-size: 1.6rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 15px; font-weight: 700; color: #fff; border-bottom: 1px solid var(--border-dim); padding-bottom: 12px; }
 
-        /* Competencies - High Contrast Grid */
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-        }
+        /* About Me Content */
+        .about-text { font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem; }
+        .about-text strong { color: #fff; font-weight: 600; }
 
-        .comp-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-dim);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: 0.3s ease;
-        }
+        /* Competencies - High Visibility Cards */
+        .competencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .comp-card { background: var(--card-bg); border: 1px solid var(--border-dim); border-radius: 14px; padding: 1.8rem; transition: 0.3s ease; }
+        .comp-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2); }
+        .comp-header { display: flex; align-items: center; gap: 14px; margin-bottom: 1.2rem; }
+        .comp-icon { font-size: 1.3rem; color: var(--accent); }
+        .comp-title { font-size: 0.85rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        .comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .skill-badge { font-size: 0.75rem; font-weight: 600; padding: 5px 12px; background: rgba(255, 255, 255, 0.05); color: #e2e8f0; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 6px; }
 
-        .comp-card:hover { border-color: var(--accent); transform: translateY(-3px); }
-        .comp-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; }
-        .comp-icon { font-size: 1.1rem; color: var(--accent); }
-        .comp-title { font-size: 0.8rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
+        /* Experience Items */
+        .timeline-item { border-left: 2px solid var(--accent); padding-left: 2rem; position: relative; margin-bottom: 4rem; }
+        .timeline-item::before { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--bg-main); border: 3px solid var(--accent); }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; flex-wrap: wrap; }
+        .company { color: var(--accent); font-weight: 800; font-size: 1.2rem; }
+        .date { color: var(--text-secondary); font-size: 0.85rem; font-weight: 600; }
+        .job-title { font-weight: 600; margin-bottom: 1rem; font-size: 1.05rem; color: #fff; }
+        .job-desc { font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.7; }
+        .job-desc li { margin-bottom: 8px; }
 
-        .comp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-        .skill-badge {
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-        }
-
-        /* Achievements / Impact */
-        .impact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-        .impact-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-dim); }
-        .impact-header { display: flex; align-items: center; gap: 12px; margin-bottom: 0.8rem; color: var(--accent); font-weight: 700; font-size: 0.95rem; }
-        .impact-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-
-        /* Experience Timeline */
-        .timeline-item { border-left: 2px solid var(--accent); padding-left: 1.5rem; position: relative; margin-bottom: 3rem; }
-        .timeline-item::before { content: ""; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.4rem; }
-        .company { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
-        .date { color: var(--text-secondary); font-size: 0.8rem; }
-        .job-title { font-weight: 600; margin-bottom: 0.6rem; font-size: 1rem; color: #fff; }
-        .job-desc { font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.6; list-style-type: square; }
-
-        /* Certifications */
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-        .cert-card { background: var(--card-bg); padding: 1rem; border-radius: 10px; border: 1px solid var(--border-dim); display: flex; align-items: center; gap: 12px; }
-        .cert-card img { width: 30px; height: 30px; object-fit: contain; }
-        .cert-info { font-size: 0.8rem; font-weight: 600; color: #fff; }
+        /* Certifications Grid */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+        .cert-card { background: var(--card-bg); padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border-dim); display: flex; align-items: center; gap: 15px; }
+        .cert-card img { width: 35px; height: 35px; object-fit: contain; }
+        .cert-info { font-size: 0.85rem; font-weight: 700; color: #fff; line-height: 1.4; }
 
         @media (max-width: 1024px) {
             body { flex-direction: column; height: auto; overflow: auto; }
-            .sidebar { width: 100%; height: auto; border-right: none; }
+            .sidebar { width: 100%; height: auto; border-right: none; padding: 2rem; }
             .main-content { padding: 2rem; height: auto; }
-            .impact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -121,9 +98,6 @@
         <div class="profile-section">
             <h1>Pavan Uppuluri</h1>
             <div class="tagline">Senior Engineering Manager</div>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.6; margin-top: 10px;">
-                19.1 years of driving digital transformation and architectural excellence for global enterprises.
-            </p>
         </div>
 
         <div class="contact-box">
@@ -134,147 +108,163 @@
         </div>
 
         <nav class="nav-links">
-            <a href="#competencies"><i class="fas fa-microchip"></i> Competencies</a>
-            <a href="#impact"><i class="fas fa-chart-line"></i> Business Impact</a>
-            <a href="#experience"><i class="fas fa-briefcase"></i> Work History</a>
-            <a href="#certs"><i class="fas fa-award"></i> Certifications</a>
+            <a href="#about"><i class="fas fa-user-circle"></i> About Me</a>
+            <a href="#competencies"><i class="fas fa-layer-group"></i> Core Competencies</a>
+            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="#certs"><i class="fas fa-certificate"></i> Certifications</a>
         </nav>
 
-        <div style="margin-top: auto; padding-top: 2rem; font-size: 0.75rem; color: var(--text-secondary);">
+        <div style="margin-top: auto; padding-top: 2rem; font-size: 0.8rem; color: var(--text-secondary); border-top: 1px solid var(--border-dim);">
             <strong>Education</strong><br>
-            B.Tech in Computers | JNTU, 2006
+            B.Tech in Computers<br>
+            Jawaharlal Nehru Technological University, 2006
         </div>
     </aside>
 
     <main class="main-content">
         
-        <section id="competencies" class="section">
-            <h2>Core Competencies</h2>
-            <div class="competencies-grid">
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-users-cog comp-icon"></i><div class="comp-title">Leadership</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">People Management</span><span class="skill-badge">Mentoring</span>
-                        <span class="skill-badge">Performance Appraisal</span><span class="skill-badge">Scrum/Agile</span>
-                        <span class="skill-badge">Vendor Management</span>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-project-diagram comp-icon"></i><div class="comp-title">Architecture</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">System Design</span><span class="skill-badge">Microservices</span>
-                        <span class="skill-badge">Spring Cloud</span><span class="skill-badge">Full Stack</span>
-                        <span class="skill-badge">TFG Leadership</span>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-cloud comp-icon"></i><div class="comp-title">Cloud & DevOps</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">AWS</span><span class="skill-badge">Azure</span><span class="skill-badge">GCP</span>
-                        <span class="skill-badge">Kubernetes</span><span class="skill-badge">Docker</span>
-                        <span class="skill-badge">CI/CD (Jenkins)</span>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-code comp-icon"></i><div class="comp-title">Backend & Languages</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Java</span><span class="skill-badge">Spring Boot</span>
-                        <span class="skill-badge">Node.js</span><span class="skill-badge">Golang</span>
-                        <span class="skill-badge">Python</span><span class="skill-badge">JUnit/Mockito</span>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-brain comp-icon"></i><div class="comp-title">AI & Innovation</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Generative AI</span><span class="skill-badge">Agentic AI</span>
-                        <span class="skill-badge">AI-Driven SDLC</span><span class="skill-badge">Automation</span>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header"><i class="fas fa-database comp-icon"></i><div class="comp-title">Data & Tools</div></div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Kafka</span><span class="skill-badge">MongoDB</span><span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">Oracle Apps</span><span class="skill-badge">Splunk</span><span class="skill-badge">Grafana</span>
-                    </div>
-                </div>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-text">
+                Experienced <strong>Senior Engineering Manager with 19.1 years</strong> in software development, enterprise solutions, and digital transformation. Currently leading high-impact teams to deliver scalable, business-critical systems. Passionate about <strong>modern architecture, engineering excellence, and innovation</strong> that drives strategic growth.
             </div>
         </section>
 
-        <section id="impact" class="section">
-            <h2>Business Impact & Achievements</h2>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-header"><i class="fas fa-rocket"></i> Revenue Growth</div>
-                    <p>Shaped the ServiceNow CRM roadmap (Install Base & Sales Order Management), adopted by major enterprises like BT, SoftBank, and AT&T.</p>
+        <section id="competencies" class="section">
+            <h2>Core Competencies</h2>
+            <div class="competencies-grid">
+                
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-user-tie comp-icon"></i><div class="comp-title">Leadership & Strategy</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">People Management</span><span class="skill-badge">Performance Appraisal</span>
+                        <span class="skill-badge">Team Mentoring</span><span class="skill-badge">Scrum/Agile</span>
+                        <span class="skill-badge">Vendor Management</span><span class="skill-badge">OKR/KPI</span>
+                    </div>
                 </div>
-                <div class="impact-card">
-                    <div class="impact-header"><i class="fas fa-users"></i> Talent Development</div>
-                    <p>Achieved an 80% promotion rate and 100% retention at ServiceNow by fostering a high-performing engineering culture.</p>
+
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-cubes comp-icon"></i><div class="comp-title">Architecture & Backend</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">Java</span><span class="skill-badge">Spring Boot</span>
+                        <span class="skill-badge">Microservices</span><span class="skill-badge">System Design</span>
+                        <span class="skill-badge">Node.js</span><span class="skill-badge">Golang</span>
+                        <span class="skill-badge">Python</span><span class="skill-badge">JUnit / Mockito</span>
+                    </div>
                 </div>
-                <div class="impact-card">
-                    <div class="impact-header"><i class="fas fa-microchip"></i> Modernization</div>
-                    <p>Migrated JPMC PUMA platform from monolith to Microservices, boosting onboarding capacity and ensuring 100% SLA compliance.</p>
+
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-cloud-upload-alt comp-icon"></i><div class="comp-title">Cloud & DevOps</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">AWS</span><span class="skill-badge">Azure</span>
+                        <span class="skill-badge">GCP</span><span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">Docker</span><span class="skill-badge">CI/CD (Jenkins)</span>
+                        <span class="skill-badge">GitHub</span>
+                    </div>
                 </div>
-                <div class="impact-card">
-                    <div class="impact-header"><i class="fas fa-bolt"></i> Efficiency</div>
-                    <p>Improved engineering productivity by 30-40% through the integration of AI-assisted development and automated workflows.</p>
+
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-robot comp-icon"></i><div class="comp-title">AI & Innovation</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">Generative AI</span><span class="skill-badge">Agentic AI</span>
+                        <span class="skill-badge">AI-Driven SDLC</span><span class="skill-badge">Automation Strategy</span>
+                    </div>
                 </div>
+
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-database comp-icon"></i><div class="comp-title">Data & Observability</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">Kafka</span><span class="skill-badge">RabbitMQ</span>
+                        <span class="skill-badge">MongoDB</span><span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">Oracle Apps</span><span class="skill-badge">Grafana</span>
+                        <span class="skill-badge">Prometheus</span><span class="skill-badge">Splunk</span>
+                    </div>
+                </div>
+
+                <div class="comp-card">
+                    <div class="comp-header"><i class="fas fa-desktop comp-icon"></i><div class="comp-title">Frontend & Transformation</div></div>
+                    <div class="comp-tags">
+                        <span class="skill-badge">React.js</span><span class="skill-badge">Angular</span>
+                        <span class="skill-badge">JavaScript</span><span class="skill-badge">Full Stack Transformation</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section id="experience" class="section">
-            <h2>Professional Experience</h2>
+            <h2>Work Experience</h2>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">CBRE</span><span class="date">Jun 2025 – Present</span></div>
+                <div class="job-header">
+                    <span class="company">CBRE</span>
+                    <span class="date">Jun 2025 – Present</span>
+                </div>
                 <div class="job-title">Senior Engineering Manager</div>
                 <ul class="job-desc">
-                    <li>Owns delivery of 6 business-critical applications (iTax, UK Data Platform, Evergreen, etc.) for UK operations.</li>
-                    <li>Leads a 35+ member organization and the Full Stack Technology Focus Group (TFG).</li>
+                    <li>Owns end-to-end delivery of 6 business-critical applications (Evergreen, Site Evaluation, iTax, Single Client View, Loan Services, UK Data Platform).</li>
+                    <li>Leading a 35+ member engineering organization with a focus on technical excellence and career progression.</li>
+                    <li>Strategic lead for Al adoption across the SDLC and Full Stack Technology Focus Group (TFG).</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">ServiceNow</span><span class="date">Jan 2022 – Jun 2025</span></div>
+                <div class="job-header">
+                    <span class="company">ServiceNow</span>
+                    <span class="date">Jan 2022 – Jun 2025</span>
+                </div>
                 <div class="job-title">Manager</div>
                 <ul class="job-desc">
-                    <li>Led the Install Base Management (IBM) and Sales Order Management (SOM) product roadmaps.</li>
-                    <li>Pioneered Proactive Case Management using AI-based intelligent routing and summarization.</li>
+                    <li>Led the ServiceNow CRM roadmap, delivering Install Base Management and Sales Order Management for global clients (BT, SoftBank, AT&T).</li>
+                    <li>Pioneered Proactive Case Management using Al-based intelligent routing and automation.</li>
+                    <li>Achieved 80% promotion rate and 100% retention through structured OKRs and talent mentoring.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">Gap Inc. (via GAP IT Services)</span><span class="date">Jan 2021 – Jan 2022</span></div>
+                <div class="job-header">
+                    <span class="company">Gap Inc. (via GAP IT Services)</span>
+                    <span class="date">Jan 2021 – Jan 2022</span>
+                </div>
                 <div class="job-title">Staff Software Engineer</div>
                 <ul class="job-desc">
-                    <li>Architected the Prepack Application, automating retail logistics and reducing operational expenses by 30%.</li>
-                    <li>Enhanced performance for Booking Visibility applications and mentored junior engineers.</li>
+                    <li>Architected the Prepack Application, reducing manual retail logistics intervention and operational expenses by 30%.</li>
+                    <li>Partnered with Product Owners to translate complex business requirements into scalable microservices.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">JPMorgan Chase Bank</span><span class="date">Aug 2017 – Jan 2021</span></div>
+                <div class="job-header">
+                    <span class="company">JPMorgan Chase Bank</span>
+                    <span class="date">Aug 2017 – Jan 2021</span>
+                </div>
                 <div class="job-title">Associate Vice President</div>
                 <ul class="job-desc">
-                    <li>Directed the modernization of the PUMA application to a resilient microservices architecture.</li>
-                    <li>Deployed a proactive monitoring framework that significantly slashed system downtime.</li>
+                    <li>Modernized the PUMA platform from monolithic architecture to high-scale microservices.</li>
+                    <li>Designed a proactive monitoring framework that significantly reduced SLA breaches and system downtime.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">Mphasis</span><span class="date">Aug 2016 – Apr 2017</span></div>
+                <div class="job-header">
+                    <span class="company">Mphasis</span>
+                    <span class="date">Aug 2016 – Apr 2017</span>
+                </div>
                 <div class="job-title">Project Lead</div>
                 <ul class="job-desc">
-                    <li>Managed end-to-end execution of the PUMA project for JPMC, ensuring alignment with global business objectives.</li>
+                    <li>Managed end-to-end execution and timely delivery of the PUMA project for JPMC global operations.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header"><span class="company">Oracle</span><span class="date">Dec 2006 – Aug 2016</span></div>
+                <div class="job-header">
+                    <span class="company">Oracle</span>
+                    <span class="date">Dec 2006 – Aug 2016</span>
+                </div>
                 <div class="job-title">Principal Application Engineer</div>
                 <ul class="job-desc">
-                    <li>Spearheaded SLM Guided Navigation and Sourcing As A Service (SAAS) platforms.</li>
-                    <li>Led projects in Advanced Shipment Notice and APAC Earnest Money Deposit frameworks.</li>
+                    <li>Led high-impact projects: SLM Guided Navigation, Advanced Shipment Notice, and Sequential/Parallel Scoring.</li>
+                    <li>Pioneered the development of a scalable SaaS-based sourcing platform and APAC Earnest Money Deposit framework.</li>
                 </ul>
             </div>
         </section>
@@ -284,27 +274,27 @@
             <div class="cert-grid">
                 <div class="cert-card">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
-                    <div class="cert-info">OCP, Java SE 17 Programmer</div>
+                    <div class="cert-info">Oracle Certified Professional, Java SE 17 Programmer</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS">
-                    <div class="cert-info">AWS Solutions Architect - Professional</div>
+                    <div class="cert-info">AWS Certified Solutions Architect - Professional</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/kubernetes.png" alt="K8s">
-                    <div class="cert-info">Certified Kubernetes Developer (CKAD)</div>
+                    <div class="cert-info">Certified Kubernetes Application Developer (CKAD)</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/google-cloud-platform.png" alt="GCP">
-                    <div class="cert-info">GCP Professional Cloud Architect</div>
+                    <div class="cert-info">Google Cloud Professional Cloud Architect</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/microsoft.png" alt="Azure">
-                    <div class="cert-info">Azure Fundamentals</div>
+                    <div class="cert-info">Microsoft Certified: Azure Fundamentals</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring">
-                    <div class="cert-info">Spring Certified Professional (VMWare)</div>
+                    <div class="cert-info">Spring Certified Professional - VMWare</div>
                 </div>
             </div>
         </section>
