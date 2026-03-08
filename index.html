@@ -325,66 +325,99 @@ grid-template-columns:1fr;
   color: #ffffff; /* icon also white on hover */
 }
 
-/* COLLAPSIBLE BUTTONS - Slim Strip & Professional */
+/* REFINED ARTICLES DROPDOWNS */
 .collapsible {
   background: #ffffff;
-  color: #1f2937;
+  color: #0f172a;
   cursor: pointer;
-  padding: 14px 20px;
+  padding: 16px 20px;
   width: 100%;
-  border-left: 3px solid #1e40af;  /* slim colored strip */
-  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #2563eb; 
+  border-radius: 8px;
   text-align: left;
   font-size: 16px;
   font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .collapsible:hover {
   background: #f8fafc;
-  border-left-color: #2563eb; /* subtle hover change */
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Arrow rotation */
+.collapsible.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+  background: #f1f5f9;
+}
+
 .collapsible .arrow {
-  font-size: 14px;
-  color: #1e40af;
+  font-size: 12px;
+  color: #64748b;
   transition: transform 0.3s ease;
 }
 
 .collapsible.active .arrow {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
+  color: #2563eb;
 }
 
-/* COLLAPSIBLE CONTENT - remove extra space */
 .collapsible-content {
   background: #ffffff;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease;
-  margin-bottom: 10px;
-  padding-left: 0;  /* removed extra left padding */
+  transition: max-height 0.3s ease-out;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 15px;
 }
 
-/* Links inside collapsible content */
+/* Updated Link Style with LinkedIn Icon */
 .collapsible-content a {
-  display: block;
-  padding: 8px 20px;  /* controlled padding for clean alignment */
+  display: flex;
+  justify-content: space-between; /* Pushes icon to the right */
+  align-items: center;
+  padding: 12px 24px;
   text-decoration: none;
-  color: #1e40af;
+  color: #334155;
+  font-size: 14.5px;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.2s ease;
+}
+
+.collapsible-content a:last-child {
+  border-bottom: none;
+}
+
+.collapsible-content a i.fa-linkedin {
   font-size: 14px;
-  border-bottom: 1px solid #e5e7eb;
-  margin-left: 0;  /* remove extra space */
+  color: #0a66c2;
+  opacity: 0.5;
+  transition: all 0.2s ease;
+  transform: translateX(10px);
 }
 
 .collapsible-content a:hover {
+  background: #f0f9ff;
   color: #2563eb;
-  background: #f0f9ff; /* subtle hover highlight */
+  padding-left: 30px;
+}
+
+.collapsible-content a:hover i.fa-linkedin {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .article-link {
@@ -897,28 +930,45 @@ Proven track record in leading engineering transformations, driving revenue grow
 <!-- ARTCLES -->
 
 <section id="articles" class="section">
-  <h2><i class="fa-solid fa-book"></i> Articles</h2>
+  <h2><i class="fa-solid fa-book-open"></i> Featured Articles</h2>
 
   <button class="collapsible">
-    System Design
-    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <span><i class="fa-solid fa-gears" style="margin-right:10px; color:#2563eb;"></i> System Design & Architecture</span>
+    <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
   </button>
   <div class="collapsible-content">
-    <a href="https://www.linkedin.com" target="_blank">Designing Scalable Systems</a>
-    <a href="https://www.linkedin.com" target="_blank">Microservices Best Practices</a>
-    <a href="https://www.linkedin.com" target="_blank">API Design Patterns</a>
+    <a href="https://www.linkedin.com" target="_blank">
+      Designing Scalable Distributed Systems
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      Microservices: Transitioning from Monoliths
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      Modern API Design Patterns for Enterprise
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
   </div>
 
   <button class="collapsible">
-    Leadership
-    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+    <span><i class="fa-solid fa-arrow-up-right-dots" style="margin-right:10px; color:#2563eb;"></i> Engineering Leadership</span>
+    <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
   </button>
   <div class="collapsible-content">
-    <a href="https://www.linkedin.com" target="_blank">Leading High-Performance Teams</a>
-    <a href="https://www.linkedin.com" target="_blank">Mentorship & Career Growth</a>
-    <a href="https://www.linkedin.com" target="_blank">Agile Leadership Insights</a>
+    <a href="https://www.linkedin.com" target="_blank">
+      Building and Scaling High-Performance Teams
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      The Art of Technical Mentorship
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      Agile Transformation in Large Organizations
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
   </div>
-
 </section>
 
 </div>
