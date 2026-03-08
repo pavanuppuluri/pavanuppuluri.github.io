@@ -325,15 +325,14 @@ grid-template-columns:1fr;
   color: #ffffff; /* icon also white on hover */
 }
 
-/* COLLAPSIBLE LINKS */
-/* COLLAPSIBLE BUTTONS - Slim Border Version */
+/* COLLAPSIBLE BUTTONS - Slim Strip & Professional */
 .collapsible {
   background: #ffffff;
   color: #1f2937;
   cursor: pointer;
   padding: 14px 20px;
   width: 100%;
-  border-left: 2px solid #1e40af;  /* slim border */
+  border-left: 3px solid #1e40af;  /* slim colored strip */
   border-radius: 6px;
   text-align: left;
   font-size: 16px;
@@ -348,58 +347,44 @@ grid-template-columns:1fr;
 
 .collapsible:hover {
   background: #f8fafc;
-  border-left-color: #2563eb;
+  border-left-color: #2563eb; /* subtle hover change */
 }
 
-/* Arrow Icon */
-.collapsible .arrow i {
+/* Arrow rotation */
+.collapsible .arrow {
   font-size: 14px;
   color: #1e40af;
-  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.collapsible.active .arrow i {
-  color: #2563eb;
-  animation: bounceRotate 0.35s forwards;
+.collapsible.active .arrow {
+  transform: rotate(90deg);
 }
 
-@keyframes bounceRotate {
-  0% { transform: rotate(0deg); }
-  60% { transform: rotate(100deg); }
-  80% { transform: rotate(85deg); }
-  100% { transform: rotate(90deg); }
-}
-
-/* Collapsible Content - Floating Card Style */
+/* COLLAPSIBLE CONTENT - remove extra space */
 .collapsible-content {
-  background: #f9fafb;
+  background: #ffffff;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.35s ease, box-shadow 0.3s ease;
-  border-radius: 6px;
-  margin-bottom: 12px;
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  transition: max-height 0.3s ease;
+  margin-bottom: 10px;
+  padding-left: 0;  /* removed extra left padding */
 }
 
+/* Links inside collapsible content */
 .collapsible-content a {
   display: block;
-  padding: 10px 15px;
-  background: #ffffff;
-  border-radius: 6px;
+  padding: 8px 20px;  /* controlled padding for clean alignment */
   text-decoration: none;
   color: #1e40af;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: all 0.25s ease;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-left: 0;  /* remove extra space */
 }
 
 .collapsible-content a:hover {
-  background: #e0f2fe;
   color: #2563eb;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  background: #f0f9ff; /* subtle hover highlight */
 }
 
 .article-link {
