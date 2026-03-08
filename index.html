@@ -90,6 +90,18 @@ padding:26px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 transition:all 0.25s ease;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+height:4px;
+width:100%;
+background:linear-gradient(90deg,#2563eb,#38bdf8);
 }
 
 .card:hover{
@@ -287,7 +299,7 @@ with high reliability and performance.
 
 <section id="skills" class="section">
 
-<h2>Core Competencies</h2>
+<h2>Leadership & Technical Capabilities</h2>
 
 <div class="card-grid">
 
@@ -295,12 +307,10 @@ with high reliability and performance.
 <i class="fa-solid fa-people-group"></i>
 <h3>Engineering Leadership</h3>
 <div class="skill-tags">
-<span>Team Leadership</span>
-<span>OKRs</span>
-<span>Performance Management</span>
-<span>Talent Development</span>
-<span>Org Scaling</span>
-<span>Mentorship</span>
+<span>Leadership</span>
+<span>Team Building</span>
+<span>People Management</span>
+<span>Scrum / Agile</span>
 </div>
 </div>
 
@@ -308,12 +318,12 @@ with high reliability and performance.
 <i class="fa-solid fa-cloud"></i>
 <h3>Cloud & Architecture</h3>
 <div class="skill-tags">
-<span>Enterprise Architecture</span>
+<span>Architecture</span>
+<span>System Design</span>
 <span>Microservices</span>
+<span>Cloud</span>
 <span>AWS</span>
 <span>Azure</span>
-<span>Google Cloud</span>
-<span>API Platforms</span>
 </div>
 </div>
 
@@ -324,10 +334,12 @@ with high reliability and performance.
 <span>Java</span>
 <span>Spring Boot</span>
 <span>Angular</span>
-<span>React</span>
+<span>React.js</span>
+<span>JavaScript</span>
 <span>Node.js</span>
-<span>CI/CD</span>
-<span>DevOps</span>
+<span>Full Stack</span>
+<span>Unit Testing</span>
+<span>Mockito</span>
 </div>
 </div>
 
@@ -338,8 +350,11 @@ with high reliability and performance.
 <span>Kafka</span>
 <span>RabbitMQ</span>
 <span>Kubernetes</span>
-<span>Container Platforms</span>
-<span>Event Streaming</span>
+<span>Docker</span>
+<span>Golang</span>
+<span>Python</span>
+<span>CI/CD</span>
+<span>Jenkins</span>
 </div>
 </div>
 
@@ -347,11 +362,15 @@ with high reliability and performance.
 <i class="fa-solid fa-chart-line"></i>
 <h3>Observability</h3>
 <div class="skill-tags">
-<span>Prometheus</span>
 <span>Grafana</span>
+<span>Prometheus</span>
 <span>Splunk</span>
 <span>New Relic</span>
-<span>Distributed Tracing</span>
+<span>MongoDB</span>
+<span>MySQL</span>
+<span>Oracle</span>
+<span>Oracle Apps</span>
+<span>PLSQL</span>
 </div>
 </div>
 
@@ -361,9 +380,6 @@ with high reliability and performance.
 <div class="skill-tags">
 <span>Generative AI</span>
 <span>Agentic AI</span>
-<span>AI-assisted Development</span>
-<span>AI Productivity Tools</span>
-<span>LLM Integrations</span>
 </div>
 </div>
 
