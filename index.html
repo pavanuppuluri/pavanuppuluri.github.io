@@ -326,6 +326,7 @@ grid-template-columns:1fr;
 }
 
 /* COLLAPSIBLE LINKS */
+/* COLLAPSIBLE BUTTONS - Professional Glossy Look */
 .collapsible {
   background: #ffffff;
   color: #1f2937;
@@ -333,52 +334,72 @@ grid-template-columns:1fr;
   padding: 14px 20px;
   width: 100%;
   border-left: 5px solid #1e40af;
+  border-radius: 6px;
   text-align: left;
-  outline: none;
   font-size: 16px;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 6px;
-  border-radius: 4px;
-  transition: background 0.2s, border-color 0.2s;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .collapsible:hover {
   background: #f8fafc;
-  border-left-color: #1e40af; /* slightly darker on hover */
+  border-left-color: #2563eb;
 }
 
-.collapsible .arrow {
+/* Arrow Icon */
+.collapsible .arrow i {
   font-size: 14px;
-  color: #1e40af; /* updated arrow color */
-  transition: transform 0.3s ease;
+  color: #1e40af;
+  transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.3s ease;
 }
 
-.collapsible.active .arrow {
-  transform: rotate(90deg); /* rotate arrow when expanded */
+.collapsible.active .arrow i {
+  color: #2563eb;
+  animation: bounceRotate 0.35s forwards;
 }
 
+@keyframes bounceRotate {
+  0% { transform: rotate(0deg); }
+  60% { transform: rotate(100deg); }
+  80% { transform: rotate(85deg); }
+  100% { transform: rotate(90deg); }
+}
+
+/* Collapsible Content - Floating Card Style */
 .collapsible-content {
-  background: #ffffff;
+  background: #f9fafb;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.3s ease;
-  margin-bottom: 10px;
-  padding-left: 20px;
+  transition: max-height 0.35s ease, box-shadow 0.3s ease;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .collapsible-content a {
   display: block;
-  padding: 10px 0;
+  padding: 10px 15px;
+  background: #ffffff;
+  border-radius: 6px;
   text-decoration: none;
   color: #1e40af;
-  font-size: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
 }
 
 .collapsible-content a:hover {
-  color: #2563eb; /* highlight links in same blue */
+  background: #e0f2fe;
+  color: #2563eb;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 .article-link {
@@ -839,24 +860,24 @@ Proven track record in leading engineering transformations, driving revenue grow
   <h2><i class="fa-solid fa-book"></i> Articles</h2>
 
   <button class="collapsible">
-  System Design
-  <span class="arrow">></span>
-</button>
-<div class="collapsible-content">
-  <a href="https://www.linkedin.com" target="_blank">Designing Scalable Systems</a>
-  <a href="https://www.linkedin.com" target="_blank">Microservices Best Practices</a>
-  <a href="https://www.linkedin.com" target="_blank">API Design Patterns</a>
-</div>
+    System Design
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+  <div class="collapsible-content">
+    <a href="https://www.linkedin.com" target="_blank">Designing Scalable Systems</a>
+    <a href="https://www.linkedin.com" target="_blank">Microservices Best Practices</a>
+    <a href="https://www.linkedin.com" target="_blank">API Design Patterns</a>
+  </div>
 
-<button class="collapsible">
-  Leadership
-  <span class="arrow">></span>
-</button>
-<div class="collapsible-content">
-  <a href="https://www.linkedin.com" target="_blank">Leading High-Performance Teams</a>
-  <a href="https://www.linkedin.com" target="_blank">Mentorship & Career Growth</a>
-  <a href="https://www.linkedin.com" target="_blank">Agile Leadership Insights</a>
-</div>
+  <button class="collapsible">
+    Leadership
+    <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+  </button>
+  <div class="collapsible-content">
+    <a href="https://www.linkedin.com" target="_blank">Leading High-Performance Teams</a>
+    <a href="https://www.linkedin.com" target="_blank">Mentorship & Career Growth</a>
+    <a href="https://www.linkedin.com" target="_blank">Agile Leadership Insights</a>
+  </div>
 
 </section>
 
