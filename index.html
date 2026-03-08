@@ -332,7 +332,7 @@ grid-template-columns:1fr;
   cursor: pointer;
   padding: 14px 20px;
   width: 100%;
-  border-left: 3px solid #0f5132;
+  border-left: 5px solid #2563eb; /* same as About Me */
   text-align: left;
   outline: none;
   font-size: 16px;
@@ -346,16 +346,17 @@ grid-template-columns:1fr;
 
 .collapsible:hover {
   background: #f8fafc;
-  border-left-color: #14532d;
+  border-left-color: #1e40af; /* slightly darker on hover */
 }
 
 .collapsible .arrow {
   font-size: 14px;
-  transition: none; /* no rotation animation for minimal look */
+  color: #2563eb; /* match About Me strip */
+  transition: transform 0.3s ease;
 }
 
 .collapsible.active .arrow {
-  content: "v";
+  transform: rotate(90deg); /* rotate arrow when expanded */
 }
 
 .collapsible-content {
@@ -377,7 +378,7 @@ grid-template-columns:1fr;
 }
 
 .collapsible-content a:hover {
-  color: #0f5132;
+  color: #2563eb; /* highlight links in same blue */
 }
 
 .article-link {
@@ -842,19 +843,14 @@ Proven track record in leading engineering transformations, driving revenue grow
 </div>
 <!-- Collapsible JS -->
 <script>
-document.querySelectorAll(".collapsible").forEach(button => {
-  button.addEventListener("click", () => {
-    button.classList.toggle("active");
-
+document.querySelectorAll('.collapsible').forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
     const content = button.nextElementSibling;
-    const arrow = button.querySelector(".arrow");
-
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
-      arrow.textContent = ">"; // collapsed
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-      arrow.textContent = "v"; // expanded
     }
   });
 });
