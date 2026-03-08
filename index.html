@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,6 +115,33 @@ margin:0;
 font-size:15px;
 line-height:1.6;
 color:#374151;
+}
+
+/* SKILL TAG WIDGETS */
+
+.skill-tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:10px;
+}
+
+.skill-tags span{
+background:#eef2ff;
+color:#1e3a8a;
+font-size:13px;
+padding:6px 10px;
+border-radius:6px;
+border:1px solid #dbeafe;
+font-weight:500;
+transition:all 0.2s ease;
+}
+
+.skill-tags span:hover{
+background:#2563eb;
+color:white;
+transform:translateY(-2px) scale(1.03);
+box-shadow:0 6px 14px rgba(37,99,235,0.25);
 }
 
 /* TIMELINE */
@@ -266,55 +292,77 @@ with high reliability and performance.
 <div class="card">
 <i class="fa-solid fa-people-group"></i>
 <h3>Engineering Leadership</h3>
-<p>
-Team leadership, OKRs, performance management,
-talent development and organizational scaling.
-</p>
+<div class="skill-tags">
+<span>Team Leadership</span>
+<span>OKRs</span>
+<span>Performance Management</span>
+<span>Talent Development</span>
+<span>Org Scaling</span>
+<span>Mentorship</span>
+</div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-cloud"></i>
 <h3>Cloud & Architecture</h3>
-<p>
-Enterprise architecture, microservices design,
-AWS, Azure and Google Cloud platforms.
-</p>
+<div class="skill-tags">
+<span>Enterprise Architecture</span>
+<span>Microservices</span>
+<span>AWS</span>
+<span>Azure</span>
+<span>Google Cloud</span>
+<span>API Platforms</span>
+</div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-gears"></i>
 <h3>Modern Development</h3>
-<p>
-Java, Spring Boot, Angular, React, Node.js,
-CI/CD pipelines and DevOps automation.
-</p>
+<div class="skill-tags">
+<span>Java</span>
+<span>Spring Boot</span>
+<span>Angular</span>
+<span>React</span>
+<span>Node.js</span>
+<span>CI/CD</span>
+<span>DevOps</span>
+</div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-network-wired"></i>
 <h3>Distributed Systems</h3>
-<p>
-Kafka, RabbitMQ, Kubernetes and containerized
-platform architectures.
-</p>
+<div class="skill-tags">
+<span>Kafka</span>
+<span>RabbitMQ</span>
+<span>Kubernetes</span>
+<span>Container Platforms</span>
+<span>Event Streaming</span>
+</div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-chart-line"></i>
 <h3>Observability</h3>
-<p>
-Prometheus, Grafana, Splunk and New Relic
-monitoring platforms.
-</p>
+<div class="skill-tags">
+<span>Prometheus</span>
+<span>Grafana</span>
+<span>Splunk</span>
+<span>New Relic</span>
+<span>Distributed Tracing</span>
+</div>
 </div>
 
 <div class="card">
 <i class="fa-solid fa-brain"></i>
 <h3>AI Innovation</h3>
-<p>
-Generative AI, Agentic AI and AI-assisted
-engineering productivity platforms.
-</p>
+<div class="skill-tags">
+<span>Generative AI</span>
+<span>Agentic AI</span>
+<span>AI-assisted Development</span>
+<span>AI Productivity Tools</span>
+<span>LLM Integrations</span>
+</div>
 </div>
 
 </div>
@@ -424,4 +472,3 @@ shipment automation and sourcing SaaS systems.</p>
 
 </body>
 </html>
-```
