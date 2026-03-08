@@ -1,205 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pavan Uppuluri | Senior Engineering Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
 
-<title>Pavan Uppuluri | Engineering Manager</title>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
 
-<style>
+        header {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
 
-body{
-font-family: "Segoe UI", Arial, sans-serif;
-margin:0;
-background:#f5f7fb;
-color:#333;
-}
+        .container { max-width: 1100px; margin: auto; padding: 2rem; }
 
-header{
-background:#0a66c2;
-color:white;
-padding:40px 20px;
-text-align:center;
-}
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -1px; }
+        .subtitle { color: var(--accent-blue); font-size: 1.25rem; font-weight: 500; margin-bottom: 1.5rem; }
+        .contact-info { display: flex; justify-content: center; gap: 20px; color: var(--text-muted); font-size: 0.9rem; }
 
-header h1{
-margin:0;
-font-size:36px;
-}
+        section { margin-bottom: 4rem; }
+        h2 { font-size: 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 10px; color: var(--text-main); }
+        h2::after { content: ""; height: 1px; flex-grow: 1; background: var(--border-color); }
 
-header p{
-margin-top:8px;
-font-size:18px;
-}
+        /* Skills Grid */
+        .skills-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+        .skill-tag { background: var(--card-bg); padding: 0.6rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.85rem; text-align: center; }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:30px;
-}
+        /* Experience Cards */
+        .exp-card { background: var(--card-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 1.5rem; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .company { color: var(--accent-blue); font-weight: 700; font-size: 1.1rem; }
+        .role { font-weight: 600; font-size: 1.2rem; }
+        .date { color: var(--text-muted); font-size: 0.85rem; }
+        .exp-list { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.95rem; }
+        .exp-list li { margin-bottom: 0.5rem; }
 
-.section{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-radius:8px;
-box-shadow:0px 2px 10px rgba(0,0,0,0.05);
-}
+        /* Impact Section */
+        .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .impact-item { border-left: 3px solid var(--accent-blue); padding-left: 1.5rem; margin-bottom: 1rem; }
+        .impact-item strong { color: var(--text-main); display: block; margin-bottom: 0.3rem; }
 
-.section h2{
-margin-top:0;
-color:#0a66c2;
-}
+        /* Certifications */
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+        .cert-card { background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); padding: 1rem; border-radius: 8px; font-size: 0.9rem; }
 
-.skills span{
-display:inline-block;
-background:#eef3fb;
-padding:8px 12px;
-margin:5px;
-border-radius:6px;
-font-size:14px;
-}
+        footer { text-align: center; padding: 4rem 2rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border-color); }
 
-.project{
-margin-bottom:10px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-color:#666;
-font-size:14px;
-}
-
-a{
-color:#0a66c2;
-text-decoration:none;
-}
-
-</style>
-
+        @media (max-width: 768px) {
+            .impact-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-<h1>Pavan Uppuluri</h1>
-<p>Engineering Manager | Cloud Architecture | AI Systems</p>
-
-<p>
-<a href="https://www.linkedin.com/in/pavanuppuluri1985/">LinkedIn</a> |
-<a href="https://github.com/pavanuppuluri">GitHub</a>
-</p>
+    <h1>Pavan Uppuluri</h1>
+    <div class="subtitle">Senior Engineering Manager</div>
+    <p style="max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted);">
+        Experienced leader with 19+ years in digital transformation and enterprise solutions. 
+        Leading high-impact teams to deliver scalable, business-critical systems. [cite: 5, 6]
+    </p>
+    <div class="contact-info">
+        <span><i class="fas fa-phone"></i> +91-9492068324</span>
+        <span><i class="fas fa-envelope"></i> p.kumaru.1985@gmail.com</span>
+        <span><i class="fab fa-linkedin"></i> /in/pavanuppuluri1985</span>
+    </div>
 </header>
 
-
 <div class="container">
+    
+    <section id="impact">
+        <h2>Strategic Business Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-item">
+                <strong>Modernization at Scale (JPMorgan Chase)</strong>
+                Led the transformation of the PUMA platform from monolithic to microservices, boosting scalability and SLA compliance. [cite: 20, 21]
+            </div>
+            <div class="impact-item">
+                <strong>Product Innovation (ServiceNow)</strong>
+                Shaped the CRM roadmap (Install Base & Sales Order Management), driving adoption for BT, SoftBank, and AT&T. [cite: 13, 14]
+            </div>
+            <div class="impact-item">
+                <strong>Engineering Efficiency</strong>
+                Improved engineering efficiency by 30% through AI-driven development and agile workflow optimization. [cite: 26]
+            </div>
+            <div class="impact-item">
+                <strong>Talent Leadership</strong>
+                Fostered an 80% promotion rate and 100% retention rate at ServiceNow through structured mentorship. [cite: 18]
+            </div>
+        </div>
+    </section>
 
-<div class="section">
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <div class="role">Senior Engineering Manager</div>
+                    <div class="company">CBRE</div>
+                </div>
+                <div class="date">Jun 2025 – Present</div>
+            </div>
+            <ul class="exp-list">
+                <li>Leading a 35+ member engineering organization supporting CBRE UK operations. [cite: 33, 38]</li>
+                <li>Owning modernization of 6 business-critical applications including iTax and UK Data Platform. [cite: 33]</li>
+                <li>Driving AI adoption across the SDLC to improve developer productivity. [cite: 43]</li>
+            </ul>
+        </div>
 
-<h2>About Me</h2>
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <div class="role">Manager</div>
+                    <div class="company">ServiceNow</div>
+                </div>
+                <div class="date">Jan 2022 – Jun 2025</div>
+            </div>
+            <ul class="exp-list">
+                <li>Spearheaded Sales Order Management (SOM) enabling end-to-end order capture and fulfillment. [cite: 70]</li>
+                <li>Integrated AI-assisted development tools, boosting productivity by 30-40%. [cite: 74]</li>
+            </ul>
+        </div>
 
-<p>
-Engineering Manager with strong experience leading high-performing teams,
-delivering scalable enterprise platforms, and driving cloud-native
-architectures. Passionate about building resilient distributed systems,
-AI-driven applications, and high-quality engineering cultures.
-</p>
+        <div class="exp-card">
+            <div class="exp-header">
+                <div>
+                    <div class="role">Associate Vice President</div>
+                    <div class="company">JPMorgan Chase Bank</div>
+                </div>
+                <div class="date">Aug 2017 – Jan 2021</div>
+            </div>
+            <ul class="exp-list">
+                <li>Architected the migration of PUMA application to a scalable microservices-based architecture. [cite: 92]</li>
+                <li>Deployed proactive monitoring frameworks to reduce system downtime. [cite: 95]</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Core Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-tag">System Design</div>
+            <div class="skill-tag">Microservices</div>
+            <div class="skill-tag">Java SE 17</div>
+            <div class="skill-tag">Spring Boot</div>
+            <div class="skill-tag">Kubernetes</div>
+            <div class="skill-tag">AWS / Azure / GCP</div>
+            <div class="skill-tag">Generative AI</div>
+            <div class="skill-tag">Agentic AI</div>
+            <div class="skill-tag">Kafka / RabbitMQ</div>
+            <div class="skill-tag">React.js</div>
+            <div class="skill-tag">Docker / CI/CD</div>
+            <div class="skill-tag">Architecture</div>
+        </div>
+    </section>
+
+    <section id="certs">
+        <h2>Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card"><strong>AWS</strong> Certified Solutions Architect - Professional [cite: 10]</div>
+            <div class="cert-card"><strong>CKAD:</strong> Certified Kubernetes Application Developer [cite: 9]</div>
+            <div class="cert-card"><strong>Google Cloud</strong> Professional Cloud Architect [cite: 10]</div>
+            <div class="cert-card"><strong>Oracle</strong> Certified Professional, Java SE 17 [cite: 9]</div>
+            <div class="cert-card"><strong>Spring</strong> Certified Professional - VMWare [cite: 9]</div>
+            <div class="cert-card"><strong>Azure</strong> Fundamentals [cite: 10]</div>
+        </div>
+    </section>
 
 </div>
-
-
-<div class="section">
-
-<h2>Professional Experience</h2>
-
-<p><b>Engineering Manager</b></p>
-
-<ul>
-<li>Leading engineering teams delivering enterprise software platforms</li>
-<li>Driving Agile delivery models and DevOps practices</li>
-<li>Building scalable microservices architectures</li>
-<li>Mentoring engineers and developing leadership pipelines</li>
-<li>Delivering enterprise implementations using ServiceNow</li>
-</ul>
-
-</div>
-
-
-<div class="section">
-
-<h2>Architecture Projects</h2>
-
-<div class="project">Hotel Room Booking AI Agent</div>
-<div class="project">Automated Resume Matching System</div>
-<div class="project">Spring Boot Auto-Scaling Architecture</div>
-<div class="project">End-to-End CI/CD Pipeline with Jenkins, SonarQube, Docker</div>
-<div class="project">Observability using Prometheus & Grafana</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Microservices</span>
-<span>Kafka</span>
-<span>ServiceNow</span>
-<span>AWS</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>CI/CD</span>
-<span>Jenkins</span>
-<span>SonarQube</span>
-<span>Prometheus</span>
-<span>Grafana</span>
-<span>AI Systems</span>
-
-</div>
-
-</div>
-
-
-<div class="section">
-
-<h2>Thought Leadership</h2>
-
-<ul>
-<li>Saga Pattern for Distributed Transactions</li>
-<li>Cache Stampede Prevention Strategies</li>
-<li>Kafka Partitioning Strategy</li>
-<li>Cloud Native Microservices Architecture</li>
-</ul>
-
-</div>
-
-
-<div class="section">
-
-<h2>Contact</h2>
-
-<p>Email: your-email@example.com</p>
-
-<p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/pavanuppuluri1985/">
-linkedin.com/in/pavanuppuluri1985
-</a>
-</p>
-
-</div>
-
-</div>
-
 
 <footer>
-© 2026 Pavan Uppuluri
+    <p>B.Tech in Computers, Jawaharlal Nehru Technological University (2006) [cite: 117, 118, 120]</p>
+    <p>&copy; 2026 Pavan Uppuluri | Built for GitHub Pages</p>
 </footer>
 
 </body>
