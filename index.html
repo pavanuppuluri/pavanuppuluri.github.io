@@ -324,6 +324,54 @@ grid-template-columns:1fr;
 .contact-card:hover i {
   color: #ffffff; /* icon also white on hover */
 }
+
+  .collapsible {
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease;
+}
+
+.collapsible:hover {
+  background-color: #1d4ed8;
+}
+
+.content-collapsible {
+  padding-left: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.article-link {
+  padding: 10px 15px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #1e40af;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+
+.article-link:hover {
+  background: #e0f2fe;
+  color: #2563eb;
+}
 </style>
 </head>
 
@@ -749,47 +797,21 @@ Proven track record in leading engineering transformations, driving revenue grow
 
   <!-- System Design -->
   <div id="articles-system-design" class="section" style="margin-bottom:40px;">
-    <h3 style="margin-bottom:15px;">System Design</h3>
-    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
-      
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>Designing Scalable Systems</h3>
-        <p>Learn key principles of building scalable and resilient distributed systems.</p>
-      </a>
-
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>Microservices Best Practices</h3>
-        <p>Understand how to design and maintain microservices architecture effectively.</p>
-      </a>
-
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>API Design Patterns</h3>
-        <p>Explore design patterns for creating robust and maintainable APIs.</p>
-      </a>
-
+    <button class="collapsible"><i class="fa-solid fa-gears"></i> System Design</button>
+    <div class="content-collapsible">
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">Designing Scalable Systems</a>
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">Microservices Best Practices</a>
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">API Design Patterns</a>
     </div>
   </div>
 
   <!-- Leadership -->
   <div id="articles-leadership" class="section">
-    <h3 style="margin-bottom:15px;">Leadership</h3>
-    <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
-      
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>Leading High-Performance Teams</h3>
-        <p>Strategies to build and sustain high-performing engineering teams.</p>
-      </a>
-
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>Mentorship & Career Growth</h3>
-        <p>Effective approaches to mentoring and nurturing engineering talent.</p>
-      </a>
-
-      <a href="https://www.linkedin.com" target="_blank" class="card">
-        <h3>Agile Leadership Insights</h3>
-        <p>Learn how agile leadership can drive team productivity and engagement.</p>
-      </a>
-
+    <button class="collapsible"><i class="fa-solid fa-people-roof"></i> Leadership</button>
+    <div class="content-collapsible">
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">Leading High-Performance Teams</a>
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">Mentorship & Career Growth</a>
+      <a href="https://www.linkedin.com" target="_blank" class="article-link">Agile Leadership Insights</a>
     </div>
   </div>
 
@@ -797,6 +819,22 @@ Proven track record in leading engineering transformations, driving revenue grow
 
 </div>
 </div>
-
+<!-- Collapsible JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const coll = document.getElementsByClassName("collapsible");
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
