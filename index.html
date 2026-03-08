@@ -32,7 +32,7 @@ min-height:100vh;
 /* --- REFINED SIDEBAR --- */
 
 .sidebar {
-  width: 320px;
+  width: 340px; /* Adjusted to 340px to fit name */
   background: var(--sidebar-bg);
   color: white;
   padding: 50px 30px;
@@ -61,6 +61,7 @@ min-height:100vh;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  white-space: nowrap; /* Keeps name on single line */
 }
 
 .sidebar p.role {
@@ -521,7 +522,7 @@ grid-template-columns:1fr;
   <aside class="sidebar">
     <div class="header">
       <h1>Pavan Kumar Uppuluri</h1>
-      <p class="role">Senior Engineering Manager</p>
+      <p class="role">Senior Engineering Manager <br> <span style="color: #e2e8f0; font-size: 12px; font-weight: 400; text-transform: none;">@ CBRE</span></p>
     </div>
 
     <nav class="nav">
