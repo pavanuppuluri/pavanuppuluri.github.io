@@ -7,9 +7,15 @@
 <title>Pavan Kumar Uppuluri | Senior Engineering Manager</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --sidebar-bg: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  --accent-blue: #38bdf8;
+  --text-muted: #94a3b8;
+  --nav-hover: rgba(255, 255, 255, 0.05);
+}
 
 body{
 margin:0;
@@ -23,42 +29,148 @@ display:flex;
 min-height:100vh;
 }
 
-/* SIDEBAR */
+/* --- REFINED SIDEBAR --- */
 
-.sidebar{
-width:300px;
-background:#0f172a;
-color:white;
-padding:40px;
-position:sticky;
-top:0;
-height:100vh;
+.sidebar {
+  width: 320px;
+  background: var(--sidebar-bg);
+  color: white;
+  padding: 50px 30px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+  overflow-y: auto; /* Just in case content gets too tall on smaller screens */
 }
 
-.sidebar h1{
-margin:0;
-font-size:24px;
+/* Hide scrollbar for sidebar but allow scroll */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.sidebar p{
-color:#cbd5f5;
-margin-top:6px;
-margin-bottom:30px;
+.sidebar h1 {
+  margin: 0;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 
-.nav a{
-display:block;
-text-decoration:none;
-color:#e2e8f0;
-padding:12px 0;
-border-bottom:1px solid rgba(255,255,255,0.08);
+.sidebar p.role {
+  color: var(--accent-blue);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  margin-bottom: 35px;
+  font-weight: 600;
 }
 
-.nav a:hover{
-color:#38bdf8;
+/* Navigation Links */
+.nav {
+  flex-grow: 1;
 }
 
-/* CONTENT */
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e2e8f0;
+  padding: 12px 16px;
+  margin: 4px 0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.nav-item i {
+  width: 24px;
+  font-size: 16px;
+  margin-right: 12px;
+  color: var(--text-muted);
+}
+
+.nav-item:hover {
+  background: var(--nav-hover);
+  color: var(--accent-blue);
+}
+
+.nav-item:hover i {
+  color: var(--accent-blue);
+}
+
+.nav-group {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sub-nav {
+  padding-left: 36px;
+  margin-top: 4px;
+}
+
+.sub-nav-link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.sub-nav-link:hover {
+  color: white;
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 13px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.contact-card i {
+  width: 20px;
+  text-align: center;
+  color: var(--accent-blue);
+  font-size: 16px;
+}
+
+.contact-card:hover {
+  background: #2563eb;
+  color: #ffffff;
+  transform: translateX(3px);
+  border-color: #2563eb;
+}
+
+.contact-card:hover i {
+  color: #ffffff;
+}
+
+/* --- CONTENT --- */
 
 .content{
 flex:1;
@@ -178,7 +290,7 @@ margin:0;
 /* ABOUT ME STYLES */
 
 .about-executive{
-  border-left: 5px solid #1e40af; /* soft professional blue */
+  border-left: 5px solid #1e40af; 
   background: #ffffff;
   padding: 30px;
   border-radius: 8px;
@@ -234,10 +346,11 @@ color:#78350f;
 flex-direction:column;
 }
 
-.sidebar{
-width:100%;
-height:auto;
-position:relative;
+.sidebar {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 30px;
 }
 
 .about-metrics{
@@ -293,36 +406,6 @@ grid-template-columns:1fr;
   .certifications-grid{
     grid-template-columns:1fr;
   }
-}
-
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: #1e293b; /* dark navy */
-  color: #f8fafc; /* professional white */
-  text-decoration: none;
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.contact-card i {
-  font-size: 16px;
-  width: 20px;
-  text-align: center;
-  color: #38bdf8; /* subtle professional blue */
-}
-
-.contact-card:hover {
-  background: #2563eb; /* hover blue */
-  color: #ffffff; 
-  transform: translateX(3px);
-}
-
-.contact-card:hover i {
-  color: #ffffff; /* icon also white on hover */
 }
 
 /* REFINED ARTICLES DROPDOWNS - STRIP COLOR MATCHED TO ABOUT ME */
@@ -435,61 +518,52 @@ grid-template-columns:1fr;
 
 <div class="container">
 
-<div class="sidebar">
-
-<h1>Pavan Kumar Uppuluri</h1>
-
-<p>
-Senior Engineering Manager<br>
-CBRE
-</p>
-
-<div class="contact-info" style="margin-bottom:30px; display:flex; flex-direction:column; gap:12px;">
-
-  <a href="tel:+919492068324" class="contact-card">
-    <i class="fa-solid fa-phone"></i> +91-94920-68324
-  </a>
-
-  <a href="mailto:p.kumaru.1985@gmail.com" class="contact-card">
-    <i class="fa-solid fa-envelope"></i> p.kumaru.1985@gmail.com
-  </a>
-
-  <a href="https://www.linkedin.com/in/pavanuppuluri1985" target="_blank" class="contact-card">
-    <i class="fa-brands fa-linkedin"></i> @pavanuppuluri1985
-  </a>
-
-  <a href="https://github.com/pavanuppuluri" target="_blank" class="contact-card">
-    <i class="fa-brands fa-github"></i> @pavanuppuluri
-  </a>
-
-  <a href="https://github.com/pavanuppuluri/pavanuppuluri.github.io/raw/master/Pavan_Uppuluri_Senior_Engineering_Manager.pdf" 
-     download="Pavan_Uppuluri_Senior_Engineering_Manager.pdf"
-     class="contact-card" 
-     title="Download My Profile">
-    <i class="fa-solid fa-download"></i> Download Profile
-  </a>
-
-</div>
-
-<div class="nav">
-  <a href="#about">About</a>
-  <a href="#achievements">Achievements</a>
-  <a href="#skills">Competencies</a>
-  <a href="#experience">Experience</a>
-  <a href="#certifications">Certifications</a>
-
-  <div>
-    <a href="#articles" style="font-weight:600;">Articles</a>
-    <div style="padding-left:15px; display:flex; flex-direction:column;">
-      <a href="#articles-system-design" style="font-weight:400; font-size:14px;">System Design</a>
-      <a href="#articles-leadership" style="font-weight:400; font-size:14px;">Leadership</a>
+  <aside class="sidebar">
+    <div class="header">
+      <h1>Pavan Kumar Uppuluri</h1>
+      <p class="role">Senior Engineering Manager</p>
     </div>
-  </div>
-</div>
 
-</div>
+    <nav class="nav">
+      <a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About</a>
+      <a href="#achievements" class="nav-item"><i class="fa-solid fa-trophy"></i> Achievements</a>
+      <a href="#skills" class="nav-item"><i class="fa-solid fa-layer-group"></i> Competencies</a>
+      <a href="#experience" class="nav-item"><i class="fa-solid fa-briefcase"></i> Experience</a>
+      <a href="#certifications" class="nav-item"><i class="fa-solid fa-certificate"></i> Certifications</a>
+      
+      <div class="nav-group">
+        <a href="#articles" class="nav-item" style="font-weight: 600;"><i class="fa-solid fa-book-open"></i> Articles</a>
+        <div class="sub-nav">
+          <a href="#articles-system-design" class="sub-nav-link">System Design</a>
+          <a href="#articles-leadership" class="sub-nav-link">Leadership</a>
+        </div>
+      </div>
+    </nav>
 
-<div class="content">
+    <div class="contact-info">
+      <a href="tel:+919492068324" class="contact-card">
+        <i class="fa-solid fa-phone"></i> +91-94920-68324
+      </a>
+      <a href="mailto:p.kumaru.1985@gmail.com" class="contact-card">
+        <i class="fa-solid fa-envelope"></i> p.kumaru.1985@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/pavanuppuluri1985" target="_blank" class="contact-card">
+        <i class="fa-brands fa-linkedin"></i> @pavanuppuluri1985
+      </a>
+      <a href="https://github.com/pavanuppuluri" target="_blank" class="contact-card">
+        <i class="fa-brands fa-github"></i> @pavanuppuluri
+      </a>
+      <a href="https://github.com/pavanuppuluri/pavanuppuluri.github.io/raw/master/Pavan_Uppuluri_Senior_Engineering_Manager.pdf" 
+         download="Pavan_Uppuluri_Senior_Engineering_Manager.pdf"
+         class="contact-card" 
+         style="background: rgba(56, 189, 248, 0.1); border-color: var(--accent-blue);"
+         title="Download My Profile">
+        <i class="fa-solid fa-download"></i> Download Profile
+      </a>
+    </div>
+  </aside>
+
+<main class="content">
 
 <section id="about" class="section">
 
@@ -896,7 +970,7 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
   </div>
 </section>
 <section id="articles" class="section">
-  <h2><i class="fa-solid fa-book-open"></i> Featured Articles</h2>
+  <h2 id="articles-system-design"><i class="fa-solid fa-book-open"></i> Featured Articles</h2>
 
   <button class="collapsible">
     <span><i class="fa-solid fa-gears" style="margin-right:10px; color:#1e40af;"></i> System Design & Architecture</span>
@@ -917,7 +991,7 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
     </a>
   </div>
 
-  <button class="collapsible">
+  <h2 id="articles-leadership" style="display:none;">Leadership</h2> <button class="collapsible">
     <span><i class="fa-solid fa-arrow-up-right-dots" style="margin-right:10px; color:#1e40af;"></i> Engineering Leadership</span>
     <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
   </button>
@@ -937,8 +1011,9 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
   </div>
 </section>
 
+</main>
 </div>
-</div>
+
 <script>
 document.querySelectorAll('.collapsible').forEach(button => {
   button.addEventListener('click', () => {
@@ -952,5 +1027,6 @@ document.querySelectorAll('.collapsible').forEach(button => {
   });
 });
 </script>
+
 </body>
 </html>
