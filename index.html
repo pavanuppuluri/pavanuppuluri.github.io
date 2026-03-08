@@ -91,7 +91,7 @@ font-size:20px;
 
 .card-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
@@ -116,7 +116,7 @@ color:#2563eb;
 }
 
 .card h3{
-margin:0 0 8px 0;
+margin:0 0 10px 0;
 font-size:18px;
 font-weight:600;
 color:#1e40af;
@@ -125,10 +125,15 @@ align-items:center;
 gap:10px;
 }
 
-.card p{
+.card ul{
 margin:0;
-font-size:15px;
-line-height:1.6;
+padding-left:18px;
+}
+
+.card li{
+margin-bottom:6px;
+font-size:14px;
+line-height:1.5;
 color:#374151;
 }
 
@@ -251,48 +256,66 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
 
 <h2><i class="fa-solid fa-trophy"></i> Key Achievements</h2>
 
-<div class="card-grid">
+<div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
 
 <div class="card">
 <h3><i class="fa-solid fa-rocket"></i> Accelerated Revenue & Customer Growth</h3>
-<p>
-Played a pivotal role in shaping the ServiceNow CRM roadmap, delivering core products like Install Base Management and Sales Order Management. These offerings became foundational to the platform, driving adoption by major customers such as BT, SoftBank, and AT&T, generating new revenue streams and improving enterprise customer satisfaction.
-</p>
+<ul>
+<li>Played a pivotal role in shaping the ServiceNow CRM roadmap.</li>
+<li>Delivered Install Base Management and Sales Order Management.</li>
+<li>Adopted by major customers including BT, SoftBank, and AT&T.</li>
+<li>Generated new revenue streams and improved customer satisfaction.</li>
+</ul>
 </div>
 
 <div class="card">
 <h3><i class="fa-solid fa-users"></i> Leadership in Talent Development</h3>
-<p>
-Fostered a culture of excellence at ServiceNow by mentoring a high-performing engineering team, implementing structured OKRs, and driving career development initiatives. Achieved an 80% promotion rate (8 of 10 team members) and maintained 100% retention while delivering strategic goals supporting company growth and innovation.
-</p>
+<ul>
+<li>Led and mentored a high-performing engineering team.</li>
+<li>Implemented structured OKRs and career growth programs.</li>
+<li>Achieved 80% promotion rate among team members.</li>
+<li>Maintained 100% retention while delivering strategic goals.</li>
+</ul>
 </div>
 
 <div class="card">
 <h3><i class="fa-solid fa-diagram-project"></i> Platform Modernization & Scale</h3>
-<p>
-Led the modernization of the PUMA platform at JPMorgan Chase, transforming a monolithic system into a scalable microservices architecture. This enabled faster onboarding of new customers, improved SLA compliance, increased scalability, and strengthened customer satisfaction.
-</p>
+<ul>
+<li>Led modernization of JPMorgan’s PUMA platform.</li>
+<li>Transitioned architecture from monolithic to microservices.</li>
+<li>Improved scalability and onboarding capacity.</li>
+<li>Strengthened SLA compliance and customer experience.</li>
+</ul>
 </div>
 
 <div class="card">
 <h3><i class="fa-solid fa-database"></i> Operational Excellence at Enterprise Scale</h3>
-<p>
-Designed and optimized distributed platforms capable of handling millions of transactions with high performance and resilience, ensuring business continuity, operational reliability, and system stability.
-</p>
+<ul>
+<li>Designed distributed systems handling millions of transactions.</li>
+<li>Ensured high performance and platform resilience.</li>
+<li>Enabled reliable business continuity.</li>
+<li>Improved operational stability across enterprise systems.</li>
+</ul>
 </div>
 
 <div class="card">
 <h3><i class="fa-solid fa-chart-line"></i> Productivity & Quality Gains</h3>
-<p>
-Improved engineering efficiency by 30% through AI-driven development practices, automation strategies, and agile workflows, resulting in faster release cycles, improved code quality, and reduced defect rates.
-</p>
+<ul>
+<li>Improved engineering efficiency by 30%.</li>
+<li>Introduced AI-driven development workflows.</li>
+<li>Implemented automation and agile delivery models.</li>
+<li>Delivered faster releases with better code quality.</li>
+</ul>
 </div>
 
 <div class="card">
 <h3><i class="fa-solid fa-arrows-rotate"></i> Agile Leadership & Continuous Improvement</h3>
-<p>
-Championed agile adoption and served as SCRUM Master, embedding continuous improvement through structured planning, feedback loops, retrospectives, and delivery optimization to enhance team productivity and engineering quality.
-</p>
+<ul>
+<li>Championed agile adoption across engineering teams.</li>
+<li>Served as SCRUM Master.</li>
+<li>Introduced structured planning and retrospectives.</li>
+<li>Improved team collaboration and delivery quality.</li>
+</ul>
 </div>
 
 </div>
