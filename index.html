@@ -119,33 +119,38 @@ line-height:1.6;
 color:#374151;
 }
 
-/* SKILL TAG WIDGETS */
+/* CORE COMPETENCIES */
 
-.skill-tags{
-display:flex;
-flex-wrap:wrap;
-gap:6px;
-margin-top:10px;
+.competency-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:20px;
 }
 
-.skill-tags span{
-background:#eef2ff;
-color:#1e3a8a;
-font-size:12px;
-padding:5px 9px;
-border-radius:6px;
-border:1px solid #dbeafe;
-font-weight:500;
-flex:0 0 auto;
-white-space:nowrap;
-transition:all 0.2s ease;
+.competency{
+background:white;
+padding:24px;
+border-radius:10px;
+box-shadow:0 10px 28px rgba(0,0,0,0.10);
 }
 
-.skill-tags span:hover{
-background:#2563eb;
-color:white;
-transform:translateY(-2px) scale(1.03);
-box-shadow:0 6px 14px rgba(37,99,235,0.25);
+.competency h3{
+margin:0 0 14px 0;
+font-size:18px;
+font-weight:600;
+color:#111827;
+}
+
+.competency ul{
+margin:0;
+padding-left:18px;
+}
+
+.competency li{
+margin-bottom:6px;
+font-size:14px;
+color:#374151;
 }
 
 /* TIMELINE */
@@ -289,115 +294,108 @@ with high reliability and performance.
 
 <section id="skills" class="section">
 
-<h2>Leadership & Technical Capabilities</h2>
+<h2>Core Competencies</h2>
 
-<div class="card-grid">
+<div class="competency-grid">
 
-<div class="card">
-<i class="fa-solid fa-people-group"></i>
+<div class="competency">
 <h3>Engineering Leadership</h3>
-<div class="skill-tags">
-<span>Leadership</span>
-<span>Team Building</span>
-<span>People Management</span>
-<span>Scrum</span>
-<span>Agile</span>
-<span>Mentoring</span>
-</div>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-server"></i>
-<h3>Backend</h3>
-<div class="skill-tags">
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Node.js</span>
-<span>Golang</span>
-<span>Python</span>
-<span>REST APIs</span>
-</div>
+<ul>
+<li>Engineering Strategy</li>
+<li>Team Building</li>
+<li>People Management</li>
+<li>Agile & Scrum</li>
+<li>Technical Mentorship</li>
+<li>Engineering Productivity</li>
+</ul>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-sitemap"></i>
+<div class="competency">
+<h3>Backend Engineering</h3>
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Node.js</li>
+<li>Python</li>
+<li>Golang</li>
+<li>REST API Development</li>
+</ul>
+</div>
+
+<div class="competency">
 <h3>System Design & Architecture</h3>
-<div class="skill-tags">
-<span>System Design</span>
-<span>Architecture</span>
-<span>Microservices</span>
-<span>Cloud Architecture</span>
-<span>API Design</span>
-</div>
+<ul>
+<li>Enterprise Architecture</li>
+<li>Microservices Architecture</li>
+<li>API Design</li>
+<li>Cloud Architecture</li>
+<li>Scalable Platform Design</li>
+</ul>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-network-wired"></i>
+<div class="competency">
 <h3>Distributed Systems</h3>
-<div class="skill-tags">
-<span>Kafka</span>
-<span>RabbitMQ</span>
-<span>Kubernetes</span>
-<span>Docker</span>
-<span>Event Streaming</span>
-</div>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-display"></i>
-<h3>Frontend</h3>
-<div class="skill-tags">
-<span>Angular</span>
-<span>React.js</span>
-<span>JavaScript</span>
-<span>HTML</span>
-<span>CSS</span>
-</div>
+<ul>
+<li>Event Driven Architecture</li>
+<li>Apache Kafka</li>
+<li>RabbitMQ</li>
+<li>Container Platforms</li>
+<li>Kubernetes</li>
+</ul>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-database"></i>
+<div class="competency">
+<h3>Frontend Technologies</h3>
+<ul>
+<li>React</li>
+<li>Angular</li>
+<li>JavaScript</li>
+<li>HTML5</li>
+<li>CSS3</li>
+</ul>
+</div>
+
+<div class="competency">
 <h3>Cache & Databases</h3>
-<div class="skill-tags">
-<span>MongoDB</span>
-<span>MySQL</span>
-<span>Oracle</span>
-<span>PLSQL</span>
-<span>Oracle Apps</span>
-</div>
+<ul>
+<li>MongoDB</li>
+<li>MySQL</li>
+<li>Oracle Database</li>
+<li>PL/SQL</li>
+<li>Data Modeling</li>
+</ul>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-chart-line"></i>
+<div class="competency">
 <h3>Observability</h3>
-<div class="skill-tags">
-<span>Prometheus</span>
-<span>Grafana</span>
-<span>Splunk</span>
-<span>New Relic</span>
-</div>
-</div>
-
-<div class="card">
-<i class="fa-solid fa-brain"></i>
-<h3>AI</h3>
-<div class="skill-tags">
-<span>Generative AI</span>
-<span>Agentic AI</span>
-<span>AI Assisted Development</span>
-</div>
+<ul>
+<li>Prometheus</li>
+<li>Grafana</li>
+<li>Splunk</li>
+<li>New Relic</li>
+<li>Monitoring & Alerting</li>
+</ul>
 </div>
 
-<div class="card">
-<i class="fa-solid fa-gears"></i>
-<h3>CI/CD</h3>
-<div class="skill-tags">
-<span>CI/CD</span>
-<span>Jenkins</span>
-<span>Docker</span>
-<span>Kubernetes</span>
-<span>Automation</span>
+<div class="competency">
+<h3>Artificial Intelligence</h3>
+<ul>
+<li>Generative AI</li>
+<li>Agentic AI</li>
+<li>AI Assisted Development</li>
+<li>AI Engineering Workflows</li>
+</ul>
 </div>
+
+<div class="competency">
+<h3>CI/CD & DevOps</h3>
+<ul>
+<li>CI/CD Pipelines</li>
+<li>Jenkins</li>
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>Automation Engineering</li>
+</ul>
 </div>
 
 </div>
