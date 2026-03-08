@@ -325,15 +325,14 @@ grid-template-columns:1fr;
   color: #ffffff; /* icon also white on hover */
 }
 
-/* REFINED ARTICLES DROPDOWNS */
-/* REFINED ARTICLES - NO HORIZONTAL LINES */
+/* REFINED ARTICLES DROPDOWNS - BORDERS REMOVED */
 .collapsible {
   background: #ffffff;
   color: #0f172a;
   cursor: pointer;
   padding: 16px 20px;
   width: 100%;
-  border: 1px solid #e2e8f0;
+  border: none; /* Removed thin border */
   border-left: 4px solid #2563eb; 
   border-radius: 8px;
   text-align: left;
@@ -343,15 +342,14 @@ grid-template-columns:1fr;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.07);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .collapsible:hover {
   background: #f8fafc;
-  border-color: #cbd5e1;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .collapsible.active {
@@ -359,7 +357,6 @@ grid-template-columns:1fr;
   border-bottom-right-radius: 0;
   margin-bottom: 0;
   background: #f1f5f9;
-  border-bottom-color: transparent; /* Removes line between button and content */
 }
 
 .collapsible .arrow {
@@ -378,30 +375,30 @@ grid-template-columns:1fr;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease-out;
-  border: 1px solid #e2e8f0;
-  border-top: none; /* No top line */
+  border: none; /* Explicitly removed borders from dropdown box */
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   margin-bottom: 15px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
 }
 
 .collapsible-content a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
+  padding: 14px 24px;
   text-decoration: none;
   color: #334155;
   font-size: 14.5px;
   font-weight: 500;
-  border-bottom: none; /* Explicitly removed horizontal lines */
+  border-bottom: none; /* Removed line between links */
   transition: all 0.2s ease;
 }
 
 .collapsible-content a i.fa-linkedin {
   font-size: 14px;
   color: #0a66c2;
-  opacity: 0; /* Hidden until hover for a cleaner look */
+  opacity: 0; 
   transition: all 0.2s ease;
   transform: translateX(10px);
 }
@@ -447,7 +444,6 @@ Senior Engineering Manager<br>
 CBRE
 </p>
 
-<!-- CONTACT INFO CARDS -->
 <div class="contact-info" style="margin-bottom:30px; display:flex; flex-direction:column; gap:12px;">
 
   <a href="tel:+919492068324" class="contact-card">
@@ -466,7 +462,6 @@ CBRE
     <i class="fa-brands fa-github"></i> @pavanuppuluri
   </a>
 
-  <!-- NEW DOWNLOAD LINK -->
   <a href="https://github.com/pavanuppuluri/pavanuppuluri.github.io/raw/master/Pavan_Uppuluri_Senior_Engineering_Manager.pdf" 
      download="Pavan_Uppuluri_Senior_Engineering_Manager.pdf"
      class="contact-card" 
@@ -483,7 +478,6 @@ CBRE
   <a href="#experience">Experience</a>
   <a href="#certifications">Certifications</a>
 
-  <!-- Updated Articles Nav -->
   <div>
     <a href="#articles" style="font-weight:600;">Articles</a>
     <div style="padding-left:15px; display:flex; flex-direction:column;">
@@ -497,19 +491,15 @@ CBRE
 
 <div class="content">
 
-<!-- ABOUT -->
-
 <section id="about" class="section">
 
 <h2><i class="fa-solid fa-user"></i> About Me</h2>
 
-<!-- Executive Paragraph -->
 <div class="about-executive">
 Senior Engineering Manager with 19+ years of experience delivering enterprise platforms, leading global engineering teams, and driving digital transformation across large organizations including Oracle, JPMorgan Chase, ServiceNow, GAP, and CBRE. 
 Expertise spans cloud architecture, microservices platforms, large-scale distributed systems, and engineering leadership. Passionate about modern architecture, AI-enabled engineering productivity, and building high-performing teams that deliver strategic business outcomes.
 </div>
 
-<!-- Metrics Cards -->
 <div class="about-metrics">
 <div class="metric-card">
 <h3>19+</h3>
@@ -537,14 +527,8 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
 </div>
 </div>
 
-<!-- 
-<div class="about-highlight">
-Proven track record in leading engineering transformations, driving revenue growth through platform modernization, and fostering high-performance global teams delivering strategic business impact.
-</div> -->
-
 </section>
 
-<!-- ACHIEVEMENTS -->
 <section id="achievements" class="section">
 <h2><i class="fa-solid fa-trophy"></i> Business Impact & Key Achievements</h2>
 <div class="card-grid" style="grid-template-columns:repeat(3,1fr);">
@@ -612,7 +596,6 @@ Proven track record in leading engineering transformations, driving revenue grow
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="section">
 <h2><i class="fa-solid fa-layer-group"></i> Core Competencies</h2>
 <div class="competency-grid">
@@ -720,7 +703,6 @@ Proven track record in leading engineering transformations, driving revenue grow
 </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" class="section">
 <h2><i class="fa-solid fa-briefcase"></i> Professional Experience</h2>
 <div class="card-grid" style="grid-template-columns:1fr; gap:20px;">
@@ -798,13 +780,11 @@ Proven track record in leading engineering transformations, driving revenue grow
 </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications" class="section">
   <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
 
   <div class="certifications-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px;">
 
-    <!-- ISB Online -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <img src="isb.png" alt="ISB Online" style="height:30px; margin-bottom:6px;">
@@ -818,13 +798,11 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- Oracle Java -->
-<div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
+    <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
   <div>
     <i class="fa-brands fa-java" style="font-size:30px; color:#f89820; margin-bottom:6px;"></i>
     <h3 style="margin:0; font-size:15px;">Oracle Certified Professional : Java 17</h3>
   </div>
-  <!-- UPDATED BUTTON TO DOWNLOAD PDF -->
   <a href="OracleCertifiedJavaProfessional.pdf" download
      style="font-size:13px; text-decoration:none; color:white; font-weight:500; 
             background:#1e40af; padding:4px 10px; border-radius:16px; 
@@ -833,8 +811,6 @@ Proven track record in leading engineering transformations, driving revenue grow
   </a>
 </div>
 
-    
-    <!-- AWS -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <img src="aws.png" alt="Amazon" style="height:25px; margin-bottom:6px;">
@@ -848,7 +824,6 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- Kubernetes -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <i class="fa-solid fa-dharmachakra" style="font-size:30px; color:#326ce5; margin-bottom:6px;"></i>
@@ -864,7 +839,6 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- Spring -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <i class="fa-solid fa-leaf" style="font-size:30px; color:#6db33f; margin-bottom:6px;"></i>
@@ -878,7 +852,6 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- Google Cloud -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <img src="google.png" alt="Google" style="height:30px; margin-bottom:6px;">
@@ -892,7 +865,6 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- Azure -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <img src="microsoft.png" alt="Microsoft" style="height:25px; margin-bottom:6px;">
@@ -906,7 +878,6 @@ Proven track record in leading engineering transformations, driving revenue grow
       </a>
     </div>
 
-    <!-- ServiceNow -->
     <div class="cert-card" style="background:white; padding:12px; border-radius:10px; box-shadow:0 10px 28px rgba(0,0,0,0.12); text-align:center; height:140px; display:flex; flex-direction:column; justify-content:space-between; align-items:center;">
       <div>
         <img src="servicenow.png" alt="ServiceNow" style="height:30px; margin-bottom:6px;">
@@ -924,8 +895,6 @@ Proven track record in leading engineering transformations, driving revenue grow
 
   </div>
 </section>
-<!-- ARTCLES -->
-
 <section id="articles" class="section">
   <h2><i class="fa-solid fa-book-open"></i> Featured Articles</h2>
 
@@ -970,7 +939,6 @@ Proven track record in leading engineering transformations, driving revenue grow
 
 </div>
 </div>
-<!-- Collapsible JS -->
 <script>
 document.querySelectorAll('.collapsible').forEach(button => {
   button.addEventListener('click', () => {
