@@ -331,7 +331,7 @@ grid-template-columns:1fr;
   color: #1f2937;
   cursor: pointer;
   padding: 14px 20px;
-  width: 100%;
+  width: 95%;  /* slightly narrower than full container */
   border-left: 3px solid #1e40af;  /* slim colored strip */
   border-radius: 6px;
   text-align: left;
@@ -341,13 +341,13 @@ grid-template-columns:1fr;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* more depth */
   transition: all 0.3s ease;
 }
 
 .collapsible:hover {
   background: #f8fafc;
-  border-left-color: #2563eb; /* subtle hover change */
+  border-left-color: #2563eb;
 }
 
 /* Arrow rotation */
@@ -361,30 +361,34 @@ grid-template-columns:1fr;
   transform: rotate(90deg);
 }
 
-/* COLLAPSIBLE CONTENT - remove extra space */
+/* COLLAPSIBLE CONTENT - slim, polished box */
 .collapsible-content {
   background: #ffffff;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   padding-left: 0;  /* removed extra left padding */
+  width: 92%;       /* slightly narrower than button */
+  margin-left: 8px; /* align nicely with collapsible button strip */
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* more polished depth */
 }
 
 /* Links inside collapsible content */
 .collapsible-content a {
   display: block;
-  padding: 8px 20px;  /* controlled padding for clean alignment */
+  padding: 8px 20px;  
   text-decoration: none;
   color: #1e40af;
   font-size: 14px;
   border-bottom: 1px solid #e5e7eb;
-  margin-left: 0;  /* remove extra space */
+  margin-left: 0;  
 }
 
 .collapsible-content a:hover {
   color: #2563eb;
-  background: #f0f9ff; /* subtle hover highlight */
+  background: #f0f9ff;
 }
 
 .article-link {
