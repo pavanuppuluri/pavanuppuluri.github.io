@@ -13,7 +13,6 @@
             --text-primary: #ffffff;
             --text-secondary: #94a3b8;
             --card-bg: #111827;
-            --border-glow: rgba(56, 189, 248, 0.3);
             --border-dim: rgba(255, 255, 255, 0.1);
         }
 
@@ -33,7 +32,7 @@
         }
 
         .profile-section { text-align: center; margin-bottom: 2.5rem; }
-        h1 { font-size: 1.7rem; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        h1 { font-size: 1.7rem; margin-bottom: 0.5rem; font-weight: 800; }
         .tagline { color: var(--accent); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 1.5rem; }
         
         .contact-box { background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid var(--border-dim); }
@@ -58,7 +57,7 @@
         h2 { font-size: 1.5rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 15px; font-weight: 700; color: #fff; }
         h2::after { content: ""; height: 1px; background: var(--border-dim); flex-grow: 1; }
 
-        /* High-Visibility Competencies Section */
+        /* Competencies UX - High Contrast */
         .competencies-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -69,14 +68,12 @@
             background: var(--card-bg);
             border: 1px solid var(--border-dim);
             border-radius: 14px;
-            padding: 1.8rem;
+            padding: 1.5rem;
             transition: 0.3s ease;
-            position: relative;
         }
 
         .comp-card:hover {
             border-color: var(--accent);
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
             transform: translateY(-4px);
         }
 
@@ -84,69 +81,42 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
-        .comp-icon {
-            font-size: 1.3rem;
-            color: var(--accent);
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
-        }
+        .comp-icon { font-size: 1.2rem; color: var(--accent); }
+        .comp-title { font-size: 0.8rem; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
 
-        .comp-title {
-            font-size: 0.85rem;
-            font-weight: 800;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .comp-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
+        .comp-tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .skill-badge {
             font-size: 0.75rem;
             font-weight: 600;
-            padding: 6px 14px;
+            padding: 5px 12px;
             background: rgba(255, 255, 255, 0.05);
-            color: #e2e8f0;
+            color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 6px;
-            transition: 0.2s;
         }
 
-        .comp-card:hover .skill-badge {
-            background: rgba(56, 189, 248, 0.1);
-            border-color: rgba(56, 189, 248, 0.4);
-            color: #fff;
-        }
-
-        /* Achievements/Experience Styling */
-        .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        .impact-card { background: var(--card-bg); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-dim); display: flex; gap: 15px; }
-        .impact-icon { color: var(--accent); font-size: 1.5rem; }
-        .impact-content h4 { margin-bottom: 0.4rem; font-size: 1rem; color: #fff; }
-        .impact-content p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-
+        /* Experience Timeline */
         .timeline-item { border-left: 2px solid var(--accent); padding-left: 1.5rem; position: relative; margin-bottom: 3.5rem; }
         .timeline-item::before { content: ""; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
         .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
         .company { color: var(--accent); font-weight: 700; font-size: 1.1rem; }
         .date { color: var(--text-secondary); font-size: 0.8rem; }
         .job-title { font-weight: 600; margin-bottom: 0.8rem; font-size: 1rem; color: #fff; }
+        .job-desc { font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.6; }
 
+        /* Certifications Grid */
         .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
         .cert-card { background: var(--card-bg); padding: 1.2rem; border-radius: 10px; border: 1px solid var(--border-dim); display: flex; align-items: center; gap: 15px; }
+        .cert-card img { width: 32px; height: 32px; object-fit: contain; }
         .cert-info { font-size: 0.85rem; font-weight: 600; color: #fff; }
 
         @media (max-width: 1024px) {
-            body { flex-direction: column; overflow-y: auto; height: auto; }
-            .sidebar { width: 100%; height: auto; border-right: none; padding: 2rem; }
-            .main-content { height: auto; padding: 2rem; }
-            .impact-grid, .competencies-grid { grid-template-columns: 1fr; }
+            body { flex-direction: column; height: auto; overflow: auto; }
+            .sidebar { width: 100%; height: auto; }
+            .main-content { padding: 2rem; height: auto; }
         }
     </style>
 </head>
@@ -156,30 +126,19 @@
         <div class="profile-section">
             <h1>Pavan Uppuluri</h1>
             <div class="tagline">Senior Engineering Manager</div>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">
-                19.1 years of driving engineering excellence and digital transformation for global enterprise platforms.
-            </p>
         </div>
 
         <div class="contact-box">
             <a href="tel:+919492068324" class="contact-item"><i class="fas fa-phone-alt"></i> +91-9492068324</a>
             <a href="mailto:p.kumaru.1985@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> p.kumaru.1985@gmail.com</a>
             <a href="https://linkedin.com/in/pavanuppuluri1985/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
-            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</div>
         </div>
 
         <nav class="nav-links">
-            <a href="#competencies"><i class="fas fa-code-branch"></i> Core Competencies</a>
-            <a href="#impact"><i class="fas fa-bullseye"></i> Key Achievements</a>
-            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-            <a href="#certs"><i class="fas fa-certificate"></i> Certifications</a>
+            <a href="#competencies"><i class="fas fa-layer-group"></i> Competencies</a>
+            <a href="#experience"><i class="fas fa-history"></i> Experience</a>
+            <a href="#certs"><i class="fas fa-award"></i> Certifications</a>
         </nav>
-
-        <div style="margin-top: auto; padding-top: 2rem; font-size: 0.75rem; color: var(--text-secondary); border-top: 1px solid var(--border-dim);">
-            <strong>Education</strong><br>
-            B.Tech in Computers<br>
-            JNTU, 2006
-        </div>
     </aside>
 
     <main class="main-content">
@@ -187,150 +146,38 @@
         <section id="competencies" class="section">
             <h2>Core Competencies</h2>
             <div class="competencies-grid">
-                
                 <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-user-shield comp-icon"></i>
-                        <div class="comp-title">Leadership & Culture</div>
-                    </div>
+                    <div class="comp-header"><i class="fas fa-users comp-icon"></i><div class="comp-title">Leadership</div></div>
                     <div class="comp-tags">
-                        <span class="skill-badge">Leadership</span>
                         <span class="skill-badge">People Management</span>
-                        <span class="skill-badge">Performance Appraisal</span>
-                        <span class="skill-badge">Team Mentoring</span>
+                        <span class="skill-badge">Mentoring</span>
                         <span class="skill-badge">Scrum/Agile</span>
                     </div>
                 </div>
-
                 <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-cubes comp-icon"></i>
-                        <div class="comp-title">Architecture & Systems</div>
-                    </div>
+                    <div class="comp-header"><i class="fas fa-project-diagram comp-icon"></i><div class="comp-title">Architecture</div></div>
                     <div class="comp-tags">
                         <span class="skill-badge">System Design</span>
                         <span class="skill-badge">Microservices</span>
-                        <span class="skill-badge">Architecture</span>
                         <span class="skill-badge">Spring Cloud</span>
-                        <span class="skill-badge">Full Stack</span>
                     </div>
                 </div>
-
                 <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-cloud-upload-alt comp-icon"></i>
-                        <div class="comp-title">Cloud & Infrastructure</div>
-                    </div>
+                    <div class="comp-header"><i class="fas fa-cloud comp-icon"></i><div class="comp-title">Cloud</div></div>
                     <div class="comp-tags">
                         <span class="skill-badge">AWS</span>
                         <span class="skill-badge">Azure</span>
                         <span class="skill-badge">GCP</span>
                         <span class="skill-badge">Kubernetes</span>
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">CI/CD</span>
-                        <span class="skill-badge">Jenkins</span>
                     </div>
                 </div>
-
                 <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-terminal comp-icon"></i>
-                        <div class="comp-title">Backend Engineering</div>
-                    </div>
+                    <div class="comp-header"><i class="fas fa-code comp-icon"></i><div class="comp-title">Backend</div></div>
                     <div class="comp-tags">
                         <span class="skill-badge">Java</span>
                         <span class="skill-badge">Spring Boot</span>
                         <span class="skill-badge">Node.js</span>
                         <span class="skill-badge">Golang</span>
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">JUnit / Mockito</span>
-                    </div>
-                </div>
-
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-robot comp-icon"></i>
-                        <div class="comp-title">AI & Innovation</div>
-                    </div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Generative AI</span>
-                        <span class="skill-badge">Agentic AI</span>
-                    </div>
-                </div>
-
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-database comp-icon"></i>
-                        <div class="comp-title">Data & Messaging</div>
-                    </div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Kafka</span>
-                        <span class="skill-badge">RabbitMQ</span>
-                        <span class="skill-badge">MongoDB</span>
-                        <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">Oracle / Apps</span>
-                        <span class="skill-badge">SQL / PLSQL</span>
-                    </div>
-                </div>
-
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-search-plus comp-icon"></i>
-                        <div class="comp-title">Observability</div>
-                    </div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">Grafana</span>
-                        <span class="skill-badge">Prometheus</span>
-                        <span class="skill-badge">Splunk</span>
-                        <span class="skill-badge">New Relic</span>
-                        <span class="skill-badge">GitHub</span>
-                    </div>
-                </div>
-
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <i class="fas fa-desktop comp-icon"></i>
-                        <div class="comp-title">Frontend Engineering</div>
-                    </div>
-                    <div class="comp-tags">
-                        <span class="skill-badge">React.js</span>
-                        <span class="skill-badge">Angular</span>
-                        <span class="skill-badge">JavaScript</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="impact" class="section">
-            <h2>Key Achievements</h2>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="impact-icon"><i class="fas fa-rocket"></i></div>
-                    <div class="impact-content">
-                        <h4>Revenue Catalyst</h4>
-                        <p>Spearheaded ServiceNow CRM roadmap features adopted by global leaders like <strong>BT, SoftBank, and AT&T</strong>.</p>
-                    </div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-icon"><i class="fas fa-user-friends"></i></div>
-                    <div class="impact-content">
-                        <h4>Talent Leadership</h4>
-                        <p>Directed teams with an <strong>80% promotion rate</strong> and 100% retention at ServiceNow.</p>
-                    </div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="impact-content">
-                        <h4>Platform Evolution</h4>
-                        <p>Led JPMC PUMA platform transition to <strong>Microservices</strong>, enhancing scalability and reliability.</p>
-                    </div>
-                </div>
-                <div class="impact-card">
-                    <div class="impact-icon"><i class="fas fa-chart-bar"></i></div>
-                    <div class="impact-content">
-                        <h4>Efficiency Engineering</h4>
-                        <p>Boosted delivery efficiency by <strong>30-40%</strong> through AI-integrated development and automation.</p>
                     </div>
                 </div>
             </div>
@@ -340,52 +187,48 @@
             <h2>Work Experience</h2>
 
             <div class="timeline-item">
-                <div class="job-header">
-                    <span class="company">CBRE</span>
-                    <span class="date">Jun 2025 – Present</span>
-                </div>
+                <div class="job-header"><span class="company">CBRE</span><span class="date">Jun 2025 – Present</span></div>
                 <div class="job-title">Senior Engineering Manager</div>
-                <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.7;">
-                    <li>End-to-end delivery ownership for 6 business-critical applications (iTax, UK Data Platform, etc.).</li>
-                    <li>Managing a 35+ member engineering organization focused on UK business operations.</li>
-                    <li>Strategic leader for the Full Stack Technology Focus Group (TFG).</li>
+                <ul class="job-desc">
+                    <li>Delivery ownership for 6 business-critical applications (iTax, UK Data Platform).</li>
+                    <li>Leading 35+ member engineering organization.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header">
-                    <span class="company">ServiceNow</span>
-                    <span class="date">Jan 2022 – Jun 2025</span>
-                </div>
+                <div class="job-header"><span class="company">ServiceNow</span><span class="date">Jan 2022 – Jun 2025</span></div>
                 <div class="job-title">Manager</div>
-                <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.7;">
-                    <li>Directed core CRM initiatives: Install Base Management and Sales Order Management.</li>
-                    <li>Developed Proactive Case Management utilizing AI-based intelligent routing.</li>
-                    <li>Orchestrated agile delivery as Technical SCRUM Master.</li>
+                <ul class="job-desc">
+                    <li>Led CRM roadmap for Install Base and Sales Order Management.</li>
+                    <li>Developed Proactive AI-driven case management.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header">
-                    <span class="company">JPMorgan Chase Bank</span>
-                    <span class="date">Aug 2017 – Jan 2021</span>
-                </div>
+                <div class="job-header"><span class="company">JPMorgan Chase Bank</span><span class="date">Aug 2017 – Jan 2021</span></div>
                 <div class="job-title">Associate Vice President</div>
-                <ul style="font-size: 0.9rem; color: var(--text-secondary); padding-left: 1.2rem; line-height: 1.7;">
-                    <li>Modernized legacy PUMA monolithic system into a high-scale microservices ecosystem.</li>
-                    <li>Architected proactive monitoring frameworks to slash system downtime.</li>
+                <ul class="job-desc">
+                    <li>Modernized PUMA application to Microservices architecture.</li>
+                    <li>Established proactive monitoring reducing system downtime.</li>
                 </ul>
             </div>
 
             <div class="timeline-item">
-                <div class="job-header">
-                    <span class="company">Oracle</span>
-                    <span class="date">Dec 2006 – Aug 2016</span>
-                </div>
+                <div class="job-header"><span class="company">Mphasis</span><span class="date">Aug 2016 – Aug 2017</span></div>
+                <div class="job-title">Delivery Lead / Architect (Contract to Gap)</div>
+                <ul class="job-desc">
+                    <li>Architected and led digital transformation for <strong>Gap Inc.</strong></li>
+                    <li>Modernized legacy systems into scalable retail services.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="job-header"><span class="company">Oracle</span><span class="date">Dec 2006 – Aug 2016</span></div>
                 <div class="job-title">Principal Application Engineer</div>
-                <p style="font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border-dim); margin-top: 0.5rem; padding-top: 0.5rem;">
-                    Delivered enterprise solutions including SLM Guided Navigation and automated SAAS sourcing platforms.
-                </p>
+                <ul class="job-desc">
+                    <li>Pioneered Sourcing As A Service (SAAS) platforms.</li>
+                    <li>Led SLM Guided Navigation and Advanced Shipment Notice projects.</li>
+                </ul>
             </div>
         </section>
 
@@ -393,28 +236,20 @@
             <h2>Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-card">
-                    <img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS">
-                    <div class="cert-info">AWS Solutions Architect - Pro</div>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    <div class="cert-info">OCP, Java SE 17 Programmer</div>
                 </div>
                 <div class="cert-card">
-                    <img src="https://img.icons8.com/color/48/google-cloud-platform.png" alt="GCP">
-                    <div class="cert-info">Google Professional Architect</div>
+                    <img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="AWS">
+                    <div class="cert-info">AWS Solutions Architect - Pro</div>
                 </div>
                 <div class="cert-card">
                     <img src="https://img.icons8.com/color/48/kubernetes.png" alt="K8s">
                     <div class="cert-info">Certified Kubernetes Dev (CKAD)</div>
                 </div>
                 <div class="cert-card">
-                    <img src="https://img.icons8.com/color/48/java-os.png" alt="Java">
-                    <div class="cert-info">OCP, Java SE 17</div>
-                </div>
-                <div class="cert-card">
-                    <img src="https://img.icons8.com/color/48/microsoft.png" alt="Azure">
-                    <div class="cert-info">Azure Fundamentals</div>
-                </div>
-                <div class="cert-card">
-                    <img src="https://img.icons8.com/color/48/spring-logo.png" alt="Spring">
-                    <div class="cert-info">Spring Certified Professional</div>
+                    <img src="https://img.icons8.com/color/48/google-cloud-platform.png" alt="GCP">
+                    <div class="cert-info">Google Professional Architect</div>
                 </div>
             </div>
         </section>
