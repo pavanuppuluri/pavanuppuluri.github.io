@@ -325,37 +325,58 @@ grid-template-columns:1fr;
   color: #ffffff; /* icon also white on hover */
 }
 
-  .collapsible {
-  background-color: #2563eb;
-  color: white;
+/* COLLAPSIBLE LINKS */
+.collapsible {
+  background: white;
+  color: #1f2937;
   cursor: pointer;
   padding: 14px 20px;
   width: 100%;
-  border: none;
+  border-left: 5px solid #22c55e; /* green strip */
   text-align: left;
   outline: none;
   font-size: 16px;
-  border-radius: 6px;
-  margin-bottom: 10px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  transition: background 0.3s ease;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 
 .collapsible:hover {
-  background-color: #1d4ed8;
+  background: #f1f5f9;
 }
 
-.content-collapsible {
-  padding-left: 15px;
-  max-height: 0;
+.collapsible .arrow {
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.collapsible.active .arrow {
+  transform: rotate(180deg);
+}
+
+.collapsible-content {
+  background: white;
   overflow: hidden;
-  transition: max-height 0.25s ease-out;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 15px;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.collapsible-content a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #1e40af;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.collapsible-content a:hover {
+  color: #22c55e;
 }
 
 .article-link {
@@ -791,28 +812,23 @@ Proven track record in leading engineering transformations, driving revenue grow
   </div>
 </section>
 
-<!-- ARTICLES SECTION -->
 <section id="articles" class="section">
   <h2><i class="fa-solid fa-book"></i> Articles</h2>
 
   <!-- System Design -->
-  <div id="articles-system-design" class="section" style="margin-bottom:40px;">
-    <button class="collapsible"><i class="fa-solid fa-gears"></i> System Design</button>
-    <div class="content-collapsible">
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">Designing Scalable Systems</a>
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">Microservices Best Practices</a>
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">API Design Patterns</a>
-    </div>
+  <button class="collapsible">System Design <span class="arrow">▼</span></button>
+  <div class="collapsible-content">
+    <a href="https://www.linkedin.com" target="_blank">Designing Scalable Systems</a>
+    <a href="https://www.linkedin.com" target="_blank">Microservices Best Practices</a>
+    <a href="https://www.linkedin.com" target="_blank">API Design Patterns</a>
   </div>
 
   <!-- Leadership -->
-  <div id="articles-leadership" class="section">
-    <button class="collapsible"><i class="fa-solid fa-people-roof"></i> Leadership</button>
-    <div class="content-collapsible">
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">Leading High-Performance Teams</a>
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">Mentorship & Career Growth</a>
-      <a href="https://www.linkedin.com" target="_blank" class="article-link">Agile Leadership Insights</a>
-    </div>
+  <button class="collapsible">Leadership <span class="arrow">▼</span></button>
+  <div class="collapsible-content">
+    <a href="https://www.linkedin.com" target="_blank">Leading High-Performance Teams</a>
+    <a href="https://www.linkedin.com" target="_blank">Mentorship & Career Growth</a>
+    <a href="https://www.linkedin.com" target="_blank">Agile Leadership Insights</a>
   </div>
 
 </section>
@@ -829,8 +845,10 @@ document.addEventListener("DOMContentLoaded", function() {
       const content = this.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
+        this.querySelector(".arrow").textContent = "▼";
       } else {
         content.style.maxHeight = content.scrollHeight + "px";
+        this.querySelector(".arrow").textContent = "▲";
       }
     });
   }
