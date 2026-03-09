@@ -1061,15 +1061,24 @@ Expertise spans cloud architecture, microservices platforms, large-scale distrib
 
 <script>
 document.querySelectorAll('.collapsible').forEach(button => {
+
+  const content = button.nextElementSibling;
+
+  // expand by default
+  button.classList.add('active');
+  content.style.maxHeight = content.scrollHeight + "px";
+
+  // keep existing toggle behavior
   button.addEventListener('click', () => {
     button.classList.toggle('active');
-    const content = button.nextElementSibling;
+
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
     }
   });
+
 });
 </script>
 
